@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07803e2b4406eb4db623d3eab820145, type: 3}
+  m_Name: Luis
+  m_EditorClassIdentifier: 
+  editorObject: {fileID: -8793796623007192643, guid: 297db184ec7dfeb4494ec1b9d60d1b20, type: 3}
+  previewObject: {fileID: 582796314923304610, guid: bf5fc019416bcbc43a2f441c16e019bc, type: 3}
+  health: 10
+  damage: 5
