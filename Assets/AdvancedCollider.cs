@@ -7,7 +7,7 @@ public class AdvancedCollider : MonoBehaviour
 	public Rigidbody2D[] GetCollidingBodies(){
 		return collidingBodies.ToArray();
 	}
-	[SerializeField] List<Rigidbody2D> collidingBodies = new List<Rigidbody2D>();
+	List<Rigidbody2D> collidingBodies = new List<Rigidbody2D>();
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.attachedRigidbody == null){
 			return;
