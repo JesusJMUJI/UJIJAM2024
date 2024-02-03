@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332014399}
   - component: {fileID: 332014400}
+  - component: {fileID: 332014401}
   m_Layer: 0
   m_Name: Connection Area
   m_TagString: Untagged
@@ -181,6 +182,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 1.1}
   m_EdgeRadius: 0
+--- !u!114 &332014401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332014398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228bb3cec19d83e478de4b2b50df50f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &415146397
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,8 +203,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 415146398}
-  - component: {fileID: 415146400}
   - component: {fileID: 415146399}
+  - component: {fileID: 415146401}
+  - component: {fileID: 415146400}
   m_Layer: 0
   m_Name: Part
   m_TagString: Untagged
@@ -238,7 +252,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &415146400
+--- !u!233 &415146400
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415146397}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0.17033303, y: 0.25947762}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!114 &415146401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,7 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 415146397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9be01f8b9cda474488f442dfbfc3913c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &976752982
@@ -370,7 +408,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037147684}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -588,6 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab04e29ef7687794d925a181d210d019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  creatureParts: {fileID: 0}
 --- !u!1 &1534825765
 GameObject:
   m_ObjectHideFlags: 0

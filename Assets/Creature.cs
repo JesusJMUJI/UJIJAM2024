@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Creature : MonoBehaviour
 {
+    [SerializeField] CreaturePart creatureParts;
+
+    public void AssignParts(){
+        
+    }
     // Start is called before the first frame update
     void Start()
     {

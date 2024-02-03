@@ -8,4 +8,7 @@ public class CreatureEditor : Environment
 	}
 	protected override void OnDisabled(){
 	}
+	void Update(){
+		
+	}
 }
