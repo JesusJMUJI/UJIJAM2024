@@ -19,7 +19,21 @@ public class ConnectablePart : MonoBehaviour
 	}
 	void Awake(){
 		rb = GetComponent<Rigidbody2D>();
-		connectionArea = GetComponentInChildren<AdvancedCollider>();
+		
+		GameObject colObj = new GameObject("Area collider");
+		GameObject col = Instantiate(colObj, transform.position, Quaternion.identity, transform);
+		
+		col.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
+		
+		PolygonCollider2D areaCol = col.AddComponent<PolygonCollider2D>();
+		
+		connectionArea = col.AddComponent<AdvancedCollider>();
+		
+		PolygonCollider2D shapeCol = GetComponent<PolygonCollider2D>();
+		
+		areaCol.isTrigger = true;
+		areaCol.SetPath(0,shapeCol.GetPath(0));
+
 	}
 	public void AddConnection(Joint2D joint){
 		connections.Add(joint);

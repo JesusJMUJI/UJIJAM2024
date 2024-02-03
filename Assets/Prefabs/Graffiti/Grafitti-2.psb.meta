@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 1000
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -724,7 +724,15 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline: []
     vertices: []
-    spritePhysicsOutline: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -390, y: 205}
+      - {x: -271, y: 720}
+      - {x: 25, y: 1022}
+      - {x: 283, y: 897}
+      - {x: 428, y: -779}
+      - {x: 67, y: -993}
+      - {x: -285, y: -939}
     indices: 
     edges: []
     tessellationDetail: 0
