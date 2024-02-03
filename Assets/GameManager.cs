@@ -15,4 +15,7 @@ public class GameManager : MonoBehaviour
 	public void SwitchToEditor(){
 		editor.Enable();
 	}
+	void Start(){
+		SwitchToEditor();
+	}
 }
