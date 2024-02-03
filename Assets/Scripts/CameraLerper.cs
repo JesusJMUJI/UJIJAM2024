@@ -7,54 +7,33 @@ using UnityEngine.Serialization;
 
 public class CameraLerper : MonoBehaviour
 {
-    public new Camera camera;
-    RaycastHit hit;
-    private Ray ray;
-    Transform hitObjectTransform = null;
-    [SerializeField] float zoomSpeed = 6f;
+	Transform target = null;
+	float targetSize;
+	float lerpStartTime;
+	float lerpEndTime;
+	Vector3 startPos;
+	float startSize;
+	[SerializeField] Camera camera;
+	[SerializeField] AnimationCurve lerpCurve;
+	public void ZoomTowards(Transform _target, float _targetSize, float duration){
+		target = _target;
+		targetSize = _targetSize;
+		lerpStartTime = Time.time;
+		lerpEndTime = Time.time + duration;
+		startPos = transform.position;
+		startSize = WorldCamera.GetCamera().orthographicSize;
+	}
 
-    [SerializeField] private Vector3 targetBack; //Change for something else
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (hitObjectTransform != null)
-        {
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, hitObjectTransform.localScale.y,
-                zoomSpeed * Time.deltaTime);
-            camera.transform.position = Vector3.Lerp(camera.transform.position, new Vector3(hitObjectTransform.position.x, hitObjectTransform.position.y, -10), zoomSpeed * Time.deltaTime);
-        }
-        else
-        {
-            camera.orthographicSize = Mathf.Lerp(camera.orthographicSize,5,zoomSpeed*Time.deltaTime);
-            camera.transform.position = Vector3.Lerp(camera.transform.position, targetBack, zoomSpeed * Time.deltaTime);
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            ray = camera.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
-            {
-                Debug.Log(hit.collider.gameObject.name);
-                
-                Vector3 targetPosition = hit.collider.gameObject.transform.position;
-                Vector3 newPosition = new Vector3(targetPosition.x, targetPosition.y, camera.transform.position.z); 
-                // camera.transform.Translate(newPosition - camera.transform.position);
-
-                hitObjectTransform = hit.collider.gameObject.transform;
-            }
-        }
-        // Test
-        else if (Input.GetMouseButtonDown(1))
-        {
-            hitObjectTransform = null;
-            // Change for something
-            targetBack = new Vector3(0, 0, -10);
-        }
-    }
-    
+	// Update is called once per frame
+	void Update()
+	{
+		if (target != null)
+		{
+			float t = 1 - Mathf.Clamp01((lerpEndTime-Time.time)/(lerpEndTime-lerpStartTime));
+			t = lerpCurve.Evaluate(t);
+			camera.orthographicSize = Mathf.LerpUnclamped(startSize, targetSize, t);
+			transform.position = Vector3.LerpUnclamped(startPos, new Vector3(target.position.x, target.position.y, -10), t);
+		}
+	}
+	
 }
