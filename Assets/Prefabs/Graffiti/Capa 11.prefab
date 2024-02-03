@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2675186864122448190}
   - component: {fileID: 5514806795442909324}
   - component: {fileID: 8244105560650677807}
+  - component: {fileID: 5393970568473441994}
   m_Layer: 0
   m_Name: Capa 11
   m_TagString: Untagged
@@ -122,6 +123,31 @@ EdgeCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 3.89
+  m_Points:
+  - {x: -5.6369905, y: 3.0211182}
+  - {x: -3.3092241, y: -3.5007782}
+  - {x: -0.22084808, y: 3.618782}
+  - {x: 1.2783799, y: -3.6902905}
+  - {x: 5.639044, y: 3.3582115}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &5393970568473441994
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3347173508098386843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 4.59
   m_Points:
   - {x: -5.6369905, y: 3.0211182}
   - {x: -3.3092241, y: -3.5007782}
