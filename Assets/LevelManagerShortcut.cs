@@ -12,4 +12,18 @@ public class LevelManagerShortcut : MonoBehaviour
 	public void LoadNextLevel(){
 		LevelManager.instance.LoadNextScene();
 	}
+	public void LoadAbout(){
+		LevelManager.instance.LoadScene(1);
+	}
+
+	public void LoadBuilder()
+	{
+		LevelManager.instance.LoadScene(2);
+	}
+
+	public void TestExit()
+	{
+		Application.Quit();
+		Debug.Log("Your game perhaps has quitten, you should consider death");
+	}
 }

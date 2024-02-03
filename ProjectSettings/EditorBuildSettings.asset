@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/jesus.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ffb103fb494e93144b7474f6d9303973
+  - enabled: 1
+    path: Assets/Scenes/AboutScene.unity
+    guid: 15aae60f8dd940d4cbd01c629024960d
+  - enabled: 1
+    path: Assets/Scenes/BuilderScene.unity
+    guid: feb9658980ae7f34692e78154935d3f0
+  - enabled: 1
+    path: Assets/Scenes/BattleScene.unity
+    guid: 84343191ff3f38f42a1cb26303e20145
   m_configObjects: {}

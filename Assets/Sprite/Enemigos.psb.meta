@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 873e91a12d56b2b43a1c8a278468a663
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: tiles_tiled_x9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 3072
+      height: 3072
+    spriteID: cff80457bd9ee2a4ca656f4e8ca6f5bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Carpeta 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 5be0cc75a2fb20446bf801c29b27fffc
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Capa 24
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6e360d6a593da7a45bb30aa80fbeb6f5
+    layerID: -1318273867
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 25
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 952861bc6d830d248800b8fb5f9737e5
+    layerID: -1318273866
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 23
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 032302b2ee3268541a6c26f20df257aa
+    layerID: -1318273864
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 26
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 512750cd76e4bb240839d71921e583f3
+    layerID: -1318273869
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 21
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6fcf881d67bc59d47897175f9d48bb88
+    layerID: -1318273862
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 22
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 3eb46217be189ad4eb2bb389e2adeb29
+    layerID: -1318273865
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 19
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d47344e46a978bb4d837934f67f32868
+    layerID: -1721558381
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 20
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dcba8e1b85165b149abef1569014fa3a
+    layerID: -1318273863
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 17
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ff1c7fd3615bbae4c91051bc35661d79
+    layerID: -1721558395
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 18
+    spriteName: 
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8da7d38560763364e829fef32932dc76
+    layerID: -1721558382
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Carpeta 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 38c64467fed3ca74d8bea3de17f57cb4
+    layerID: -1891676830
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Capa 14
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: e8c062c7c1f598a41818bd778d2cc6e4
+    layerID: -1721558394
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 15
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 26189e376e8b20b4ab77762fbb7aa115
+    layerID: -1721558393
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 13
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 865e3bb6290738448a65076248fdef96
+    layerID: -1721558391
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 16
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 09dc957462cacd84cb464d7a6605ebda
+    layerID: -1721558396
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 8
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 417dc3724d4dc3a4da60dcf5db70c241
+    layerID: 1887849095
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 12
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 2e70e9bc1a7195d47b6935c8a7290265
+    layerID: -1721558392
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 7
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 31ff869090fe78948a3f260a03cc6670
+    layerID: 1840794928
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 11
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 18c80683d89cd6c4cb8dcfeb79201962
+    layerID: -1721558389
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 10
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: a0127669e249a974e837a59f1471a021
+    layerID: -1721558390
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 6
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 51ac6fc20d099574aa9f9537dfb62897
+    layerID: -888088427
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 9
+    spriteName: 
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 1be25917b0380b146838e9d8ded6fa5a
+    layerID: 321765154
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Carpeta 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ec54cdff90bc46f4d937beaae602d4f1
+    layerID: -1891676831
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Capa 4
+    spriteName: 
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 7040282133bc85d4d9b51e950d14bd21
+    layerID: 274710987
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 1
+    spriteName: 
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 628262233769e844c95974214c3d876c
+    layerID: 677995514
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 5
+    spriteName: 
+    isGroup: 0
+    parentIndex: 23
+    spriteID: fd0bbb9e761ddbe4580b1f3831eb2c15
+    layerID: -1291372954
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 3
+    spriteName: 
+    isGroup: 0
+    parentIndex: 23
+    spriteID: d7cdc7f7edb697647bcee33af631f5e9
+    layerID: -484803900
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Capa 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 2a4a8b84b2b91f644b246095dbe145d6
+    layerID: 1081280041
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: tiles_tiled_x9
+    spriteName: tiles_tiled_x9
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cff80457bd9ee2a4ca656f4e8ca6f5bc
+    layerID: 1961994486
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
