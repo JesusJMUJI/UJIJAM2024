@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Part", menuName = "ScriptableObjects/CreaturePart", order = 1)]
 public class PartAsset : ScriptableObject
 {
-	[SerializeField] ConnectablePart partObject;
-	[SerializeField] float health;
-	[SerializeField] float damage;
+	[SerializeField] public ConnectablePart editorObject;
+	[SerializeField] public float health;
+	[SerializeField] public float damage;
 }

@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class CreaturePart : MonoBehaviour
 {
-    [SerializeField] float health;
+    PartAsset asset;
+    public void AssignAsset(PartAsset _asset){
+        asset = _asset;
+    }
     
     // Start is called before the first frame update
     void Start()

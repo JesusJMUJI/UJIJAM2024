@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
 		}
 		instance = this;
 	}
-	[SerializeField] Environment editor;
+	[SerializeField] PartCollection collection;
+	[SerializeField] CreatureEditor editor;
 	public void SwitchToEditor(){
 		editor.Enable();
+		editor.AssignCollection(collection);
 	}
 	void Start(){
 		SwitchToEditor();
