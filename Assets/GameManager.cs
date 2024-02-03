@@ -11,13 +11,17 @@ public class GameManager : MonoBehaviour
 		}
 		instance = this;
 	}
-	[SerializeField] PartCollection collection;
+	[SerializeField] CollectionPicker collectionPicker;
 	[SerializeField] CreatureEditor editor;
-	public void SwitchToEditor(){
+	public void SwitchToEditor(PartCollection collection){
+		collectionPicker.Disable();
 		editor.Enable();
 		editor.AssignCollection(collection);
 	}
+	public void SwitchToCollectionPicker(){
+		collectionPicker.Enable();
+	}
 	void Start(){
-		SwitchToEditor();
+		SwitchToCollectionPicker();
 	}
 }

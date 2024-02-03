@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CreatureEditor : Environment
 {
+	public static bool isEditing;
 	protected override void OnEnabled(){
+		//TODO reset camera
 	}
 	protected override void OnDisabled(){
 	}
@@ -53,6 +55,8 @@ public class CreatureEditor : Environment
 	TargetJoint2D targetJoint;
 	[SerializeField] float rotationSpeed = 4;
 	void Update(){
+		isEditing = active && selectedPart != null;
+
 		if(!active){return;}
 		ProcessSelection();
 		ProcessDrag();
