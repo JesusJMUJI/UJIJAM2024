@@ -21,7 +21,7 @@ public class ConnectablePart : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		
 		GameObject colObj = new GameObject("Area collider");
-		GameObject col = Instantiate(colObj, transform.position, Quaternion.identity, transform);
+		GameObject col = Instantiate(colObj, transform.position, transform.rotation, transform);
 		
 		col.transform.localScale = new Vector3(1.2f,1.2f,1.2f);
 		
