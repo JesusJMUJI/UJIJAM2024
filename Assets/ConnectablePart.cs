@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConnectablePart : MonoBehaviour
 {
+	[SerializeField] PartAsset asset;
 	List<Joint2D> connections = new List<Joint2D>();
 	Rigidbody2D rb;
 	AdvancedCollider connectionArea;
@@ -23,8 +24,13 @@ public class ConnectablePart : MonoBehaviour
 	public void AddConnection(Joint2D joint){
 		connections.Add(joint);
 	}
-	public void ConvertToCreature(){
+	public CreaturePart ConvertToCreaturePart(){
+		CreaturePart part = gameObject.AddComponent<CreaturePart>();
+		part.AssignAsset(asset);
+		//Handle hinges
+		Destroy(this);
 
+		return part;
 	}
 	public void Lock(){
 		Rigidbody2D[] contacts = connectionArea.GetCollidingBodies();

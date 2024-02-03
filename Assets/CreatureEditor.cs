@@ -8,9 +8,36 @@ public class CreatureEditor : Environment
 	}
 	protected override void OnDisabled(){
 	}
+	void ClearParts(){
+		foreach (Transform child in partContainer) {
+			Destroy(child.gameObject);
+		}
+	}
+	public void AssignCollection(PartCollection collection){
+		ClearParts();
 
-	void AssignParts(ConnectablePart[] _parts){
-
+		parts = new ConnectablePart[collection.parts.Length];
+		for(int i = 0; i < collection.parts.Length; i++){
+			PartCollection.Part part = collection.parts[i];
+			Vector2 relativePosition = part.element.localPosition;
+			Quaternion rotation = part.element.rotation;
+			parts[i] = Instantiate(part.asset.editorObject, relativePosition,rotation, partContainer);
+		}
+	}
+	[SerializeField] Transform partContainer;
+	public Creature ExtractCreature(){
+		GameObject creatureObj = new GameObject("Creature");
+		GameObject creature = Instantiate(creatureObj, transform.position, Quaternion.identity) as GameObject;
+		Creature creatureComp = creature.AddComponent<Creature>();
+		List<CreaturePart> creatureParts = new List<CreaturePart>();
+		foreach(ConnectablePart part in parts){
+			if(part.IsLocked()){
+				CreaturePart creaturePart = part.ConvertToCreaturePart();
+				creatureParts.Add(creaturePart);
+			}
+		}
+		creatureComp.AssignParts(creatureParts.ToArray());
+		return creatureComp; 
 	}
 	[SerializeField] ConnectablePart[] parts;
 	bool BasePartSet(){
@@ -71,7 +98,7 @@ public class CreatureEditor : Environment
 		angleJoint.autoConfigureOffset = false;
 		angleJoint.maxForce = 0;
 		// angleJoint.linearOffset = 
-		angleJoint.angularOffset = -selectedPart.transform.eulerAngles.z;
+		angleJoint.angularOffset = Mathf.DeltaAngle(selectedPart.transform.eulerAngles.z,0);
 
 
 		targetJoint = selectedPart.gameObject.AddComponent<TargetJoint2D>();

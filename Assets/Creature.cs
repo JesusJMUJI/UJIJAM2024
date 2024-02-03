@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Creature : MonoBehaviour
 {
-    [SerializeField] CreaturePart creatureParts;
+    [SerializeField] CreaturePart[] creatureParts;
 
-    public void AssignParts(){
-        
+    public void AssignParts(CreaturePart[] parts){
+        creatureParts = parts;
     }
     // Start is called before the first frame update
     void Start()
