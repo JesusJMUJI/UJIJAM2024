@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class WorldCamera : MonoBehaviour
 {
-	static WorldCamera activeInstance;
+	static WorldCamera instance;
 	Camera camera;
 	void Awake()
 	{
 		camera = GetComponent<Camera>();
 	}
 	public static Vector2 GetWorldMousePos(){
-		return activeInstance.camera.ScreenToWorldPoint(Input.mousePosition);
+		return instance.camera.ScreenToWorldPoint(Input.mousePosition);
 	}
 	public static Camera GetCamera(){
-		return activeInstance.camera;
+		return instance.camera;
 	}
 	public void Disable()
 	{
@@ -23,10 +23,10 @@ public class WorldCamera : MonoBehaviour
 
 	public void Enable()
 	{
-		if(activeInstance != null){
-			activeInstance.Disable();
+		if(instance != null){
+			instance.Disable();
 		}
-		activeInstance = this;
+		instance = this;
 		camera.enabled = true;
 	}
 

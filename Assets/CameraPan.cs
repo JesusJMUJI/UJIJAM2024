@@ -28,7 +28,7 @@ public class CameraPan : MonoBehaviour
 	void LateUpdate()
 	{
 
-		targetSize -= Input.mouseScrollDelta.y*scrollSpeed*targetSize;
+		// targetSize -= Input.mouseScrollDelta.y*scrollSpeed*targetSize;
 		
 		
 		targetSize = Mathf.Clamp(targetSize,sizeClamp.x,sizeClamp.y);

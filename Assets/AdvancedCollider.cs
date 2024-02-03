@@ -7,8 +7,8 @@ public class AdvancedCollider : MonoBehaviour
 	public Rigidbody2D[] GetCollidingBodies(){
 		return collidingBodies.ToArray();
 	}
-	List<Rigidbody2D> collidingBodies = new List<Rigidbody2D>();
-	void OnTrigger2DEnter(Collider2D collider){
+	[SerializeField] List<Rigidbody2D> collidingBodies = new List<Rigidbody2D>();
+	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.attachedRigidbody == null){
 			return;
 		}
@@ -19,7 +19,7 @@ public class AdvancedCollider : MonoBehaviour
 		}
 		collidingBodies.Add(collider.attachedRigidbody);
 	}
-	void OnTrigger2DExit(Collider2D collider){
+	void OnTriggerExit2D(Collider2D collider){
 		if(collider.attachedRigidbody == null){
 			return;
 		}
