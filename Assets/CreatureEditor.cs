@@ -27,7 +27,11 @@ public class CreatureEditor : Environment
 		}
 	}
 	[SerializeField] Transform partContainer;
-	public Creature ExtractCreature(){
+	public void CompleteCreature(){
+		Creature creature = ExtractCreature();
+		GameManager.instance.SwitchToBattle(creature);
+	}
+	Creature ExtractCreature(){
 		GameObject creatureObj = new GameObject("Creature");
 		GameObject creature = Instantiate(creatureObj, transform.position, Quaternion.identity) as GameObject;
 		Creature creatureComp = creature.AddComponent<Creature>();
@@ -35,6 +39,7 @@ public class CreatureEditor : Environment
 		foreach(ConnectablePart part in parts){
 			if(part.IsLocked()){
 				CreaturePart creaturePart = part.ConvertToCreaturePart();
+				creaturePart.transform.parent = creature.transform;
 				creatureParts.Add(creaturePart);
 			}
 		}
@@ -60,6 +65,10 @@ public class CreatureEditor : Environment
 		if(!active){return;}
 		ProcessSelection();
 		ProcessDrag();
+
+		if(Input.GetKeyDown(KeyCode.Space)){
+			CompleteCreature();
+		}
 		
 	}
 	void ProcessSelection(){

@@ -16,3 +16,6 @@ MonoBehaviour:
   previewObject: {fileID: 7534723342673240165, guid: c4f11ccef32ecfe46ba7c5eaea8ba2b7, type: 3}
   health: 10
   damage: 5
+  mass: 1
+  speed: 40
+  angleRange: {x: -75, y: 75}

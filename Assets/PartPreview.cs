@@ -5,5 +5,4 @@ using UnityEngine;
 public class PartPreview : MonoBehaviour
 {
 	[SerializeField] public PartAsset asset;
-	
 }

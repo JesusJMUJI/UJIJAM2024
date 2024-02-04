@@ -5,6 +5,8 @@ using UnityEngine;
 public class ConnectablePart : MonoBehaviour
 {
 	[SerializeField] PartAsset asset;
+	[SerializeField] NoiseSampler wigglerSampler;
+
 	List<Joint2D> connections = new List<Joint2D>();
 	Rigidbody2D rb;
 	AdvancedCollider connectionArea;
@@ -41,7 +43,22 @@ public class ConnectablePart : MonoBehaviour
 	public CreaturePart ConvertToCreaturePart(){
 		CreaturePart part = gameObject.AddComponent<CreaturePart>();
 		part.AssignAsset(asset);
+		rb.mass = asset.mass;
+		rb.gravityScale = 1;
+
 		//Handle hinges
+		HingeJoint2D[] joints = GetComponents<HingeJoint2D>();
+		float seed = Random.Range(0f,1f);
+		foreach(HingeJoint2D joint in joints){
+			HingeWiggler wiggler = gameObject.AddComponent<HingeWiggler>();
+			wiggler.SetHinge(joint);
+			wiggler.SetSeed(seed);	
+			wiggler.SetSpeed(asset.speed);
+			wiggler.SetSampler(new NoiseSampler(wigglerSampler));
+			wiggler.SetAngleRange(asset.angleRange);
+		}
+		
+		Freeze(false);
 		Destroy(this);
 
 		return part;
