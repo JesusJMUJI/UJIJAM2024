@@ -1438,7 +1438,7 @@ GameObject:
   - component: {fileID: 5046278982467097448}
   - component: {fileID: 6178866796554985316}
   m_Layer: 7
-  m_Name: Creature(Clone) 1
+  m_Name: Medium4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
