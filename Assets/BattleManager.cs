@@ -71,7 +71,7 @@ public class BattleManager : Environment
 		}
 		else if(playerCreature.GetParts().Length == 0){
 			battleOver = true;
-			LevelManager.instance.LoadScene(4);
+			LevelManager.instance.LoadScene(3);
 			//Game Over
 			SlowMotion.LerpSpeedUp(0.2f);
 		}
