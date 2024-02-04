@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectionPicker : Environment
 {
 	[SerializeField] CameraLerper cameraLerper;
+	[SerializeField] AudioSource camAudio;
 	[SerializeField] CameraFrameController cameraFrame;
 	[SerializeField] Transform collectionContainer;
 	[SerializeField] PartAsset[] partAssets;
@@ -80,14 +81,18 @@ public class CollectionPicker : Environment
 		if(collectionSelected){return;}
 		if (Input.GetMouseButtonDown(0))
 		{
-			StartCoroutine(SelectCollection());
+			if(cameraFrame.GetPartsInFrame().Length > 0){
+				StartCoroutine(SelectCollection());
+			}
 		}
 	}
 	IEnumerator SelectCollection(){
 		collectionSelected = true;
 		cameraFrame.enabled = false;
 		cameraLerper.ZoomTowards(cameraFrame.transform, cameraFrame.GetSize()/2, zoomDuration);
-		yield return new WaitForSeconds(zoomDuration);
+		yield return new WaitForSeconds(zoomDuration-0.15f);
+		camAudio.Play();
+		yield return new WaitForSeconds(0.15f);
 		animator.Play("Blink");
 		yield return new WaitForSeconds(0.2f);
 		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition,cameraFrame.GetSize()/2);

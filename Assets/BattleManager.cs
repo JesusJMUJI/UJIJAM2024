@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class BattleManager : Environment
 {
+	[SerializeField] Animator animator;
     [SerializeField] float creatureAttraction = 12f;
+    [SerializeField] TextWriter text;
 	protected override void OnEnabled(){
 		cameraController.enabled = true;
 		LoadEnemy();
+		battleOver = false;
 		//TODO reset camera
 	}
 	protected override void OnDisabled(){
@@ -46,6 +49,7 @@ public class BattleManager : Environment
 		enemyTierIndex = Mathf.Min(enemyTiers.Length-1, enemyTierIndex);
 		return enemyTiers[enemyTierIndex].GetRandom();
 	}
+	bool battleOver = false;
 	void Update(){
 		if(!active){return;}
 		if(enemyCreature == null){
@@ -54,19 +58,30 @@ public class BattleManager : Environment
 		if(playerCreature == null){
 			return;
 		}
+		if(battleOver){return;}
 		enemyCreature.UpdateParts();
 		playerCreature.UpdateParts();
 		enemyCreature.PullTowards(playerCreature.GetCenter(),creatureAttraction);
 
 		playerCreature.PullTowards(enemyCreature.GetCenter(),creatureAttraction);
 		if(enemyCreature.GetParts().Length == 0){
-			GameManager.instance.SwitchToCollectionPicker();
+			battleOver = true;
 			SlowMotion.LerpSpeedUp(0.2f);
+			StartCoroutine(NextCycle());
 		}
 		else if(playerCreature.GetParts().Length == 0){
+			battleOver = true;
+			LevelManager.instance.LoadScene(4);
 			//Game Over
 			SlowMotion.LerpSpeedUp(0.2f);
 		}
+	}
+	IEnumerator NextCycle(){
+		text.Set(GameManager.instance.cycleIndex+1);
+		animator.Play("wave");
+		yield return new WaitForSeconds(2f);
+		GameManager.instance.SwitchToCollectionPicker();
+
 	}
 	[System.Serializable]
 	public class EnemyTier{

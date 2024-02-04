@@ -30,7 +30,7 @@ public class CreaturePart : MonoBehaviour
 		if(col.gameObject.layer == gameObject.layer){
 			return;
 		}
-		if(col.relativeVelocity.magnitude > 5){
+		if(col.relativeVelocity.magnitude > 15){
 			Instantiate(hitEffect, transform.position,Quaternion.Euler(0,0,Random.Range(-45,45)));
 		}
 		CreaturePart otherPart = col.gameObject.GetComponentInParent<CreaturePart>();
