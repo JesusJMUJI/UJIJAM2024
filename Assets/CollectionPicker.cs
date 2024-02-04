@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class CollectionPicker : Environment
 {
-	PartCollection[] collections;
-	[SerializeField] PartCollection collectionPrefab;
 	[SerializeField] CameraLerper cameraLerper;
+	[SerializeField] CameraFrameController cameraFrame;
 	[SerializeField] Transform collectionContainer;
+	[SerializeField] PartAsset[] partAssets;
+
+	[SerializeField] float mapSize = 40;
+	[SerializeField] float mapPadding = 3;
+	[SerializeField] float zoomDuration = 0.8f;
 	protected override void OnEnabled(){
 		//reset camera
 		// cameraLerper.enabled = true;
-		selectedCollection = null;
-		GenerateCollections(10);
+		collectionSelected = false;
+		cameraFrame.enabled = true;
+		GenerateParts(30);
 	}
 	protected override void OnDisabled(){
+		cameraFrame.enabled = false;
+		collectionSelected = true;
 		// cameraLerper.enabled = false;
 	}
 	void ClearCollections(){
@@ -22,51 +29,65 @@ public class CollectionPicker : Environment
 			Destroy(child.gameObject);
 		}
 	}
-	void GenerateCollections(float minDistance){
-		ClearCollections();
-		List<PartCollection> collections = new List<PartCollection>();
-		int attempts = 0;
-		while(attempts < 100){
-			Vector3 pos = transform.position + (Vector3)new Vector2(Random.Range(-mapSize/2+mapPadding, mapSize/2 - mapPadding),Random.Range(-mapSize/2+mapPadding, mapSize/2 - mapPadding));
-			bool inRange = false;
-			foreach(PartCollection collection in collections){
-				if((pos-collection.transform.position).magnitude < minDistance){
-					inRange = true;
-					break;
+	void GenerateParts(int amount){
+		List<PartAsset> availableParts = new List<PartAsset>(partAssets);
+		Vector2[] spawnPoints = GenerateSpawnPoints(amount);
+		foreach(Vector2 point in spawnPoints){
+			int partIndex = Random.Range(0,availableParts.Count);
+			PartAsset asset = availableParts[partIndex];
+			availableParts.RemoveAt(partIndex);
+			Quaternion rotation = Quaternion.Euler(0, 0, Random.Range(-30, 30));
+			Transform part = Instantiate(asset.previewObject, point, rotation, transform);
+			part.gameObject.AddComponent<PartPreview>().asset = asset;
+		}
+		
+	}
+	Vector2[] GenerateSpawnPoints(int amount){
+		List<Vector2> points = new List<Vector2>();
+		for(int i = 0; i < amount; i++){
+			points.Add(GenerateSpawnPoint(10,points));
+		}
+		return points.ToArray();
+	}
+	Vector2 GenerateSpawnPoint(int iterations, List<Vector2> occupiedPositions){
+		float maxGlobalDistance = 0;
+		Vector2 maxGlobalDistancePoint = Vector2.zero;
+		float aspectRatio = WorldCamera.GetCamera().aspect;
+		for(int i = 0; i< iterations; i++){
+			float minLocalDistance = Mathf.Infinity;
+			float randX = Random.Range(-(mapSize*aspectRatio)/2+mapPadding, (mapSize*aspectRatio)/2 - mapPadding);
+			float randY = Random.Range(-mapSize/2+mapPadding, mapSize/2 - mapPadding);
+			Vector2 pos = (Vector2)transform.position + new Vector2(randX,randY);
+			foreach(Vector2 point in occupiedPositions){
+				float pointDistance = (pos-point).magnitude;
+				if(pointDistance < minLocalDistance){
+					minLocalDistance = pointDistance;
 				}
 			}
-			if(!inRange){
-				collections.Add(Instantiate(collectionPrefab, pos, Quaternion.identity, collectionContainer));
-				attempts = 0;
+			if(minLocalDistance > maxGlobalDistance){
+				maxGlobalDistance = minLocalDistance;
+				maxGlobalDistancePoint = pos;
 			}
-			else{
-				attempts++;
-			}
-
 		}
+		return maxGlobalDistancePoint;
 	}
-	[SerializeField] float mapSize = 40;
-	[SerializeField] float mapPadding = 3;
-	PartCollection selectedCollection;
-	[SerializeField] float zoomSize = 5;
-	[SerializeField] float zoomDuration = 0.8f;
+
+	bool collectionSelected = false;
 	void Update(){
 		if(!active){return;}
-		if(selectedCollection){return;}
+		if(collectionSelected){return;}
 		if (Input.GetMouseButtonDown(0))
 		{
-			RaycastHit2D hit = Physics2D.Raycast(WorldCamera.GetWorldMousePos(), -Vector2.up);
-			if(hit.collider != null){
-				selectedCollection = hit.collider.GetComponent<PartCollection>();
-				if(selectedCollection != null){
-					StartCoroutine(SelectCollection());
-				}
-			}
+			StartCoroutine(SelectCollection());
 		}
 	}
 	IEnumerator SelectCollection(){
-		cameraLerper.ZoomTowards(selectedCollection.transform, zoomSize, zoomDuration);
+		collectionSelected = true;
+		cameraFrame.enabled = false;
+		cameraLerper.ZoomTowards(cameraFrame.transform, cameraFrame.GetSize()/2, zoomDuration);
 		yield return new WaitForSeconds(zoomDuration);
-		GameManager.instance.SwitchToEditor(selectedCollection);
+
+		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition);
 	}
+
 }

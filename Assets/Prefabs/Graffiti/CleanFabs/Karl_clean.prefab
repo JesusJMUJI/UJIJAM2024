@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2498297083874862695}
   - component: {fileID: 5041678995506503760}
+  - component: {fileID: -7228487852971918414}
+  - component: {fileID: 25800238912347989}
   m_Layer: 0
   m_Name: Karl_clean
   m_TagString: Untagged
@@ -84,3 +86,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-7228487852971918414
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724849429899999859}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.426, y: 0.997}
+    newSize: {x: 14.26, y: 9.97}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.033, y: -0.4255}
+      - {x: -0.33600003, y: -0.43250003}
+      - {x: -0.53000003, y: -0.2885}
+      - {x: -0.69100004, y: -0.22450002}
+      - {x: -0.708, y: -0.049500003}
+      - {x: -0.46, y: 0.4735}
+      - {x: -0.041, y: 0.49650002}
+      - {x: 0.23700002, y: 0.16250001}
+      - {x: 0.1, y: -0.21350001}
+--- !u!50 &25800238912347989
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724849429899999859}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

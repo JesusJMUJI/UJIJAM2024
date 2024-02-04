@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 946525197156615741}
   - component: {fileID: 9119816274906322554}
+  - component: {fileID: -7403388269678225465}
+  - component: {fileID: -1081540408699672041}
   m_Layer: 0
   m_Name: EyeSeeYou_clean
   m_TagString: Untagged
@@ -84,3 +86,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-7403388269678225465
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2460549064448341731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.647, y: 1.105}
+    newSize: {x: 16.47, y: 11.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.66050005, y: -0.2275}
+      - {x: 0.5205, y: -0.119500004}
+      - {x: -0.3055, y: -0.3375}
+      - {x: -0.55550003, y: -0.29950002}
+      - {x: -0.58250004, y: 0.23150001}
+      - {x: -0.79950005, y: 0.33350003}
+      - {x: -0.77750003, y: 0.4275}
+      - {x: -0.52150005, y: 0.3485}
+      - {x: -0.2705, y: 0.47450003}
+      - {x: -0.0145000005, y: 0.5385}
+      - {x: 0.28550002, y: 0.45850003}
+      - {x: 0.47550002, y: 0.2605}
+      - {x: 0.59650004, y: -0.0445}
+      - {x: 0.8065, y: -0.1375}
+      - {x: 0.7975, y: -0.23550001}
+--- !u!50 &-1081540408699672041
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2460549064448341731}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

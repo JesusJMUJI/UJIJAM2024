@@ -13,10 +13,10 @@ public class GameManager : MonoBehaviour
 	}
 	[SerializeField] CollectionPicker collectionPicker;
 	[SerializeField] CreatureEditor editor;
-	public void SwitchToEditor(PartCollection collection){
+	public void SwitchToEditor(PartPreview[] selectedParts, Vector2 relativePosition){
 		collectionPicker.Disable();
 		editor.Enable();
-		editor.AssignCollection(collection);
+		editor.AssignCollection(selectedParts, relativePosition);
 	}
 	public void SwitchToCollectionPicker(){
 		collectionPicker.Enable();
