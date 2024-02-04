@@ -155,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 2468753157534840840, guid: 927d7e23a66f60f4189b31c11109effe, type: 3}
+  deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
   asset: {fileID: 11400000, guid: cd2b0c8a2d2e08745806d1c82a4a6059, type: 2}
   wigglerSampler:
     noiseScale: 0.4

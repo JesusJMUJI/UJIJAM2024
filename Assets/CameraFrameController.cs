@@ -13,7 +13,10 @@ public class CameraFrameController : MonoBehaviour
 	[SerializeField] float size;
 	[SerializeField] AdvancedCollider frameArea;
 	public float GetSize(){
-		return size;
+
+		float trueSize = size + GameManager.instance.cycleIndex*0.5f;
+		trueSize = Mathf.Min(trueSize, 8f);
+		return trueSize;
 	}
 	void Start()
 	{
@@ -33,8 +36,8 @@ public class CameraFrameController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		cameraViewVisual.size = new Vector2(size*WorldCamera.GetCamera().aspect, size);
-		cameraArea.size = new Vector2(size*WorldCamera.GetCamera().aspect, size);
+		cameraViewVisual.size = new Vector2(GetSize()*WorldCamera.GetCamera().aspect, GetSize());
+		cameraArea.size = new Vector2(GetSize()*WorldCamera.GetCamera().aspect, GetSize());
 		Vector2 targetPos = WorldCamera.GetWorldMousePos();
 
 		transform.position = Vector3.Lerp(transform.position, new Vector3(targetPos.x, targetPos.y, transform.position.z), speed*Time.fixedDeltaTime);
