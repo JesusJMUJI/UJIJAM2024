@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07803e2b4406eb4db623d3eab820145, type: 3}
+  m_Name: L_feet
+  m_EditorClassIdentifier: 
+  editorObject: {fileID: 7426172828249851170, guid: c7b4ca450c20eaa49878c9cf8df61d6c, type: 3}
+  previewObject: {fileID: 8180088937585423751, guid: e38036c73c46e0c4d9e02999c3698abc, type: 3}
+  health: 0
+  damage: 0
+  mass: 1
+  speed: 10
+  angleRange: {x: 0, y: 0}
