@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class CreaturePart : MonoBehaviour
 {
-	Coroutine attackSlowmotionRoutine;
-
     const float realPhysicsTime = 0.02f;
     const float realTime = 1;
 	static float speedUpTime;
@@ -30,6 +28,10 @@ public class CreaturePart : MonoBehaviour
 		asset = _asset;
 		health = asset.health;
 	}
+	[SerializeField] Creature creature;
+	public void AssignCreature(Creature _creature){
+		creature = _creature;
+	}
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if(col.gameObject.layer == gameObject.layer){
@@ -43,23 +45,13 @@ public class CreaturePart : MonoBehaviour
 		otherPart.Damage(asset.damage);
 		Vector2 delta = transform.position - col.gameObject.transform.position;
 
-		StartCoroutine(VelocityOverTime(delta.normalized*70));
+		creature.ApplyImpulse(delta, transform.position);
 
 		if(!slowedDown){
 			slowedDown = true;
-			SetTimeScale(0.2f);
+			SetTimeScale(0.1f);
 		}
-		speedUpTime = Time.realtimeSinceStartup + 0.3f;
-	}
-	IEnumerator VelocityOverTime(Vector2 velocity){
-		for(int i = 0; i < 4; i++){
-			if(rb == null){
-				break;
-			}
-			yield return null;
-			rb.velocity = velocity;
-		}
-		yield return null;
+		speedUpTime = Time.realtimeSinceStartup + 0.2f;
 	}
 	void Update(){
 		if(!slowedDown){return;}
