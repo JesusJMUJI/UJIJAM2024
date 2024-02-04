@@ -7,6 +7,7 @@ public class BattleManager : Environment
 
 	const float realPhysicsTime = 0.02f;
     const float realTime = 1;
+    [SerializeField] float attractionForce = 15;
 
     void SetTimeScale(float newTimeScale){
         float delta = Time.timeScale/newTimeScale;
@@ -64,9 +65,9 @@ public class BattleManager : Environment
 		}
 		enemyCreature.UpdateParts();
 		playerCreature.UpdateParts();
-		enemyCreature.PullTowards(playerCreature.GetCenter());
+		enemyCreature.PullTowards(playerCreature.GetCenter(),attractionForce);
 
-		playerCreature.PullTowards(enemyCreature.GetCenter());
+		playerCreature.PullTowards(enemyCreature.GetCenter(),attractionForce);
 		if(enemyCreature.GetParts().Length == 0){
 			GameManager.instance.SwitchToCollectionPicker();
 			SetTimeScale(1);

@@ -49,7 +49,7 @@ public class CreaturePart : MonoBehaviour
 			slowedDown = true;
 			SetTimeScale(0.2f);
 		}
-		speedUpTime = Time.realtimeSinceStartup + 0.5f;
+		speedUpTime = Time.realtimeSinceStartup + 0.3f;
 	}
 	IEnumerator VelocityOverTime(Vector2 velocity){
 		for(int i = 0; i < 4; i++){

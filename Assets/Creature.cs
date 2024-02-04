@@ -5,7 +5,6 @@ using UnityEngine;
 public class Creature : MonoBehaviour
 {
 	[SerializeField] List<CreaturePart> creatureParts = new List<CreaturePart>();
-	float attractionForce = 7; //15;
 	
 	public void CompensateOffset(){
 		Vector2 delta = GetCenter() - (Vector2)transform.position;
@@ -31,10 +30,10 @@ public class Creature : MonoBehaviour
 		center /= creatureParts.Count;
 		return center;
 	}
-	public void PullTowards(Vector2 target){
+	public void PullTowards(Vector2 target, float force){
 		foreach(CreaturePart part in creatureParts){
 			Vector2 delta = target-(Vector2)part.transform.position;
-			part.GetRigidbody().velocity += delta.normalized*attractionForce*Time.deltaTime;
+			part.GetRigidbody().velocity += delta.normalized*force*Time.deltaTime;
 		}
 	}
 	public void UpdateParts()

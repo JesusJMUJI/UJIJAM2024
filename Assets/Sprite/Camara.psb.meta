@@ -33,7 +33,7 @@ ScriptedImporter:
     spriteMeshType: 0
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 150
     spriteBorder: {x: 764, y: 361, z: 748, w: 343}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -97,13 +97,13 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 345, y: 399, z: 345, w: 340}
+    border: {x: 348, y: 401, z: 348, w: 370}
     rect:
       serializedVersion: 2
-      x: 2
-      y: 4
+      x: 0
+      y: 0
       width: 929
-      height: 925
+      height: 938
     spriteID: e4577a8fb90e72d4a8b18fd6834d5100
     spriteBone: []
     spriteOutline: []

@@ -85,7 +85,15 @@ public class CreatureEditor : Environment
 		ProcessDrag();
 
 		if(Input.GetKeyDown(KeyCode.Space)){
-			CompleteCreature();
+			if(BasePartSet()){
+				if(selectedPart){
+					RemoveJointOnSelected();
+					selectedPart = null;
+				}
+
+				CompleteCreature();
+
+			}
 		}
 		
 	}

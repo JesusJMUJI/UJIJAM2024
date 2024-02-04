@@ -7,8 +7,8 @@ using UnityEngine.Serialization;
 
 public class CameraFrameController : MonoBehaviour
 {
-
-	[SerializeField] Transform cameraViewVisual;
+	[SerializeField] BoxCollider2D cameraArea;
+	[SerializeField] SpriteRenderer cameraViewVisual;
 	[SerializeField] float speed;
 	[SerializeField] float size;
 	[SerializeField] AdvancedCollider frameArea;
@@ -33,7 +33,8 @@ public class CameraFrameController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		cameraViewVisual.localScale = new Vector3(size*WorldCamera.GetCamera().aspect, size,1);
+		cameraViewVisual.size = new Vector2(size*WorldCamera.GetCamera().aspect, size);
+		cameraArea.size = new Vector2(size*WorldCamera.GetCamera().aspect, size);
 		Vector2 targetPos = WorldCamera.GetWorldMousePos();
 
 		transform.position = Vector3.Lerp(transform.position, new Vector3(targetPos.x, targetPos.y, transform.position.z), speed*Time.fixedDeltaTime);

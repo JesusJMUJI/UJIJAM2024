@@ -8,7 +8,7 @@ public class CollectionPicker : Environment
 	[SerializeField] CameraFrameController cameraFrame;
 	[SerializeField] Transform collectionContainer;
 	[SerializeField] PartAsset[] partAssets;
-
+	[SerializeField] Animator animator;
 	[SerializeField] float mapSize = 40;
 	[SerializeField] float mapPadding = 3;
 	[SerializeField] float zoomDuration = 0.8f;
@@ -86,7 +86,8 @@ public class CollectionPicker : Environment
 		cameraFrame.enabled = false;
 		cameraLerper.ZoomTowards(cameraFrame.transform, cameraFrame.GetSize()/2, zoomDuration);
 		yield return new WaitForSeconds(zoomDuration);
-
+		animator.Play("Blink");
+		yield return new WaitForSeconds(0.2f);
 		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition,cameraFrame.GetSize()/2);
 	}
 
