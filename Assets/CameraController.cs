@@ -12,6 +12,9 @@ public class CameraController : MonoBehaviour
 		[SerializeField] public float lerpSpeed;
 		[SerializeField] public float zoomLerpSpeed;
 		[SerializeField] public bool followCursor;
+
+		[SerializeField] public Vector2 HorizontalClamp;
+		[SerializeField] public Vector2 VerticalClamp;
 		[SerializeField] [Range(0,1f)] public float cursorPositionInfluence;
 		
 	}
@@ -59,11 +62,10 @@ public class CameraController : MonoBehaviour
 		// 	float mouseFramingZoom = (mousePos - targetPosition).magnitude;
 		// 	objectFramingZoom = Mathf.Max(objectFramingZoom, mouseFramingZoom*cameraConfig.cursorZoomInfluence);
 		// }
-
-		transform.position = Vector3.Lerp(transform.position, new Vector3(targetPosition.x, targetPosition.y, transform.position.z), cameraConfig.lerpSpeed*Time.unscaledDeltaTime);
+		Vector2 newPosition = Vector2.Lerp(transform.position, targetPosition, cameraConfig.lerpSpeed*Time.unscaledDeltaTime);
 
 		//Computing frame velocity
-		Vector2 targetDelta = targetPosition - (Vector2)transform.position;
+		Vector2 targetDelta = targetPosition - newPosition;
 		targetDelta.x /= camera.aspect;
 
 		
@@ -71,6 +73,21 @@ public class CameraController : MonoBehaviour
 
 		camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetZoom, cameraConfig.zoomLerpSpeed*Time.unscaledDeltaTime);
 
+		camera.orthographicSize = Mathf.Min(camera.orthographicSize, (cameraConfig.VerticalClamp.y - cameraConfig.VerticalClamp.x) /2);
 
+		Vector2 localTarget = transform.parent.InverseTransformPoint(newPosition);
+		localTarget.x = Mathf.Clamp(localTarget.x, cameraConfig.HorizontalClamp.x + camera.orthographicSize*camera.aspect, cameraConfig.HorizontalClamp.y - camera.orthographicSize*camera.aspect);
+		localTarget.y = Mathf.Clamp(localTarget.y, cameraConfig.VerticalClamp.x + camera.orthographicSize, cameraConfig.VerticalClamp.y - camera.orthographicSize);
+		Vector3 clampedPos = transform.parent.TransformPoint(localTarget);
+		clampedPos.z = transform.position.z;
+		transform.position = clampedPos;
+
+	}
+	void OnDrawGizmos(){
+		Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(cameraConfig.HorizontalClamp.x, cameraConfig.VerticalClamp.x,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(cameraConfig.HorizontalClamp.x, cameraConfig.VerticalClamp.y,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(cameraConfig.HorizontalClamp.y, cameraConfig.VerticalClamp.y,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(cameraConfig.HorizontalClamp.y, cameraConfig.VerticalClamp.x,0), 1);
 	}
 }

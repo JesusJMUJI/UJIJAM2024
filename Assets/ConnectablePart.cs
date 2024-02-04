@@ -6,6 +6,7 @@ public class ConnectablePart : MonoBehaviour
 {
 	[SerializeField] PartAsset asset;
 	[SerializeField] NoiseSampler wigglerSampler;
+	[SerializeField] Color battleColor;
 
 	List<Joint2D> connections = new List<Joint2D>();
 	Rigidbody2D rb;
@@ -45,6 +46,9 @@ public class ConnectablePart : MonoBehaviour
 		part.AssignAsset(asset);
 		rb.mass = asset.mass;
 		rb.gravityScale = 1;
+
+
+		GetComponent<SpriteRenderer>().color = battleColor;
 
 		//Handle hinges
 		HingeJoint2D[] joints = GetComponents<HingeJoint2D>();
