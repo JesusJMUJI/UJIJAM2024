@@ -123,7 +123,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1392
-      y: 7028
+      y: 6244
       width: 802
       height: 804
     spriteID: 154487a09aeb64f498f9b7bc63fa0d6a
@@ -135,7 +135,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1392, y: 7028}
+    uvTransform: {x: 1392, y: 6244}
     spritePosition: {x: 440, y: 171}
   - name: Capa 23
     originalName: 
@@ -145,7 +145,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1392
-      y: 5271
+      y: 4487
       width: 809
       height: 824
     spriteID: fab4b2015927d374dafe6eacc97e05fd
@@ -157,7 +157,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1392, y: 5271}
+    uvTransform: {x: 1392, y: 4487}
     spritePosition: {x: 367, y: 123}
   - name: Capa 21
     originalName: 
@@ -166,10 +166,10 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1392
-      y: 4487
-      width: 996
-      height: 776
+      x: 2527
+      y: 4
+      width: 414
+      height: 1040
     spriteID: 9df3758b823684a4db04d3ad6d658616
     spriteBone: []
     spriteOutline: []
@@ -179,8 +179,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1392, y: 4487}
-    spritePosition: {x: 242, y: 176}
+    uvTransform: {x: 2527, y: 4}
+    spritePosition: {x: 608, y: 69}
   - name: Capa 20
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -320,8 +320,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2527
-      y: 4
+      x: 1392
+      y: 7056
       width: 946
       height: 669
     spriteID: a7b6a819f3b081b47af7cb79185dbabb
@@ -333,7 +333,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2527, y: 4}
+    uvTransform: {x: 1392, y: 7056}
     spritePosition: {x: 227, y: 197}
   - name: Capa 13
     originalName: 
@@ -343,7 +343,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 1392
-      y: 6103
+      y: 5319
       width: 710
       height: 917
     spriteID: f5ccd4a9716cfd646b6fc67ebda741e2
@@ -355,7 +355,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1392, y: 6103}
+    uvTransform: {x: 1392, y: 5319}
     spritePosition: {x: 436, y: 40}
   - name: Capa 12
     originalName: 
@@ -364,8 +364,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 2527
-      y: 681
+      x: 2948
+      y: 4
       width: 514
       height: 809
     spriteID: dfc3b21a9e5db934fa86e32ae2c93c60
@@ -377,7 +377,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 2527, y: 681}
+    uvTransform: {x: 2948, y: 4}
     spritePosition: {x: 677, y: 213}
   - name: Capa 11
     originalName: 
@@ -614,14 +614,14 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: Capa 22
     spriteName: Capa 22
     isGroup: 0
     parentIndex: 2
     spriteID: 154487a09aeb64f498f9b7bc63fa0d6a
     layerID: 56
-    mosaicPosition: {x: 1392, y: 7028}
+    mosaicPosition: {x: 1392, y: 6244}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -631,7 +631,7 @@ ScriptedImporter:
     parentIndex: 2
     spriteID: fab4b2015927d374dafe6eacc97e05fd
     layerID: 55
-    mosaicPosition: {x: 1392, y: 5271}
+    mosaicPosition: {x: 1392, y: 4487}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -644,14 +644,14 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 0
+    isVisible: 1
   - name: Capa 21
     spriteName: Capa 21
     isGroup: 0
     parentIndex: 5
     spriteID: 9df3758b823684a4db04d3ad6d658616
     layerID: 52
-    mosaicPosition: {x: 1392, y: 4487}
+    mosaicPosition: {x: 2527, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -791,7 +791,7 @@ ScriptedImporter:
     parentIndex: 19
     spriteID: a7b6a819f3b081b47af7cb79185dbabb
     layerID: 31
-    mosaicPosition: {x: 2527, y: 4}
+    mosaicPosition: {x: 1392, y: 7056}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -811,7 +811,7 @@ ScriptedImporter:
     parentIndex: 21
     spriteID: f5ccd4a9716cfd646b6fc67ebda741e2
     layerID: 28
-    mosaicPosition: {x: 1392, y: 6103}
+    mosaicPosition: {x: 1392, y: 5319}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -831,7 +831,7 @@ ScriptedImporter:
     parentIndex: 23
     spriteID: dfc3b21a9e5db934fa86e32ae2c93c60
     layerID: 25
-    mosaicPosition: {x: 2527, y: 681}
+    mosaicPosition: {x: 2948, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
