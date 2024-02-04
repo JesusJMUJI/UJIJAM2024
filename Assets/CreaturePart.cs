@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,14 +21,23 @@ public class CreaturePart : MonoBehaviour
 		//if health == 0
 			//destroy gameObject
 	// Start is called before the first frame update
-	void Start()
+	private void OnCollisionEnter(Collision other)
 	{
-		
+		if (other.gameObject.GetComponent<CreaturePart>() != null)
+		{
+			other.gameObject.GetComponent<CreaturePart>().Damage(health);
+		}
 	}
 
-	// Update is called once per frame
-	void Update()
+	void Damage(float damage)
 	{
-		
+		if (health > 0)
+		{
+			health -= damage;
+			if (health <= 0)
+			{
+				Destroy(gameObject);
+			}
+		}
 	}
 }
