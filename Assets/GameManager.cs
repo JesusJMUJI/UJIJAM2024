@@ -44,4 +44,9 @@ public class GameManager : MonoBehaviour
 	void Start(){
 		SwitchToCollectionPicker();
 	}
+	void Update(){
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			LevelManager.instance.LoadScene(0);
+		}
+	}
 }

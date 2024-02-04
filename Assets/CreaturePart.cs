@@ -38,7 +38,7 @@ public class CreaturePart : MonoBehaviour
 		{
 			return;
 		}
-		if(health <= 0){return;}
+		// if(health <= 0){return;}
 		otherPart.Damage(asset.damage);
 		Vector2 delta = transform.position - col.gameObject.transform.position;
 

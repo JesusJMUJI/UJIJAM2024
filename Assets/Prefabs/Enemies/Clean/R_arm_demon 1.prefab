@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2849124545440968684}
   - component: {fileID: 5140062796768101696}
+  - component: {fileID: -5761489603387200097}
+  - component: {fileID: -180895629659772570}
   m_Layer: 0
   m_Name: R_arm_demon 1
   m_TagString: Untagged
@@ -84,3 +86,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-5761489603387200097
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663329553698775156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.698, y: 1.574}
+    newSize: {x: 26.98, y: 15.74}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.225, y: -0.69200003}
+      - {x: 0.52900004, y: -0.77800006}
+      - {x: 0.33, y: -0.735}
+      - {x: 0.163, y: -0.512}
+      - {x: -0.89900005, y: -0.335}
+      - {x: -0.95500004, y: -0.546}
+      - {x: -1.3440001, y: -0.46100003}
+      - {x: -1.2090001, y: 0.075}
+      - {x: -0.82000005, y: -0.018000001}
+      - {x: -0.86, y: -0.245}
+      - {x: 0.16100001, y: -0.41200003}
+      - {x: 0.411, y: -0.25800002}
+      - {x: 0.526, y: 0.21000001}
+      - {x: -0.34500003, y: 0.333}
+      - {x: -0.507, y: 0.60200006}
+      - {x: -0.33900002, y: 0.77500004}
+      - {x: 0.77900004, y: 0.61700004}
+      - {x: 0.94200003, y: 0.425}
+      - {x: 0.794, y: -0.386}
+      - {x: 1.3310001, y: -0.64500004}
+--- !u!50 &-180895629659772570
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663329553698775156}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

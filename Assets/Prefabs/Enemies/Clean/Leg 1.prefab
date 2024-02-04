@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 247314115150706817}
   - component: {fileID: 6089175417746949761}
+  - component: {fileID: 6636596389755308646}
+  - component: {fileID: 5106961144670859419}
   m_Layer: 0
   m_Name: Leg 1
   m_TagString: Untagged
@@ -84,3 +86,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &6636596389755308646
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783533900542407726}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.045, y: 2.853}
+    newSize: {x: 10.45, y: 28.53}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.40350002, y: -1.3975}
+      - {x: -0.51250005, y: -1.3715}
+      - {x: -0.5165, y: -1.3025}
+      - {x: -0.1075, y: -0.91950005}
+      - {x: -0.2755, y: -0.3185}
+      - {x: -0.2545, y: -0.009500001}
+      - {x: -0.41550002, y: 0.7925}
+      - {x: -0.1815, y: 1.1585001}
+      - {x: 0.15550001, y: 1.3645}
+      - {x: 0.40950003, y: 1.3665}
+      - {x: 0.48850003, y: 1.2205001}
+      - {x: 0.29950002, y: 0.23150001}
+      - {x: 0.34550002, y: -0.97050005}
+      - {x: 0.3045, y: -1.1855}
+--- !u!50 &5106961144670859419
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3783533900542407726}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

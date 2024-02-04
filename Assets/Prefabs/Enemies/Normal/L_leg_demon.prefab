@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7461973383311289088}
   - component: {fileID: 2378635097070704682}
   - component: {fileID: -2136648511646205720}
-  - component: {fileID: -6258856463421659902}
   - component: {fileID: 7790388280081641901}
+  - component: {fileID: 8017193597110406625}
   m_Layer: 0
   m_Name: L_leg_demon
   m_TagString: Untagged
@@ -102,55 +102,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &-6258856463421659902
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4651794441779652700}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.21, y: 22.91}
-    newSize: {x: 8.21, y: 22.91}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.415, y: -11.415}
-      - {x: -1.8549999, y: -10.715}
-      - {x: -2.915, y: -9.825}
-      - {x: -1.985, y: -6.545}
-      - {x: -4.105, y: -2.725}
-      - {x: -4.095, y: -1.305}
-      - {x: -3.115, y: 0.074999996}
-      - {x: -3.925, y: 9.804999}
-      - {x: -2.125, y: 11.455}
-      - {x: 1.2149999, y: 11.045}
-      - {x: 3.395, y: 9.245}
-      - {x: 3.695, y: 6.9649997}
-      - {x: 1.785, y: 1.145}
-      - {x: 2.905, y: -0.505}
-      - {x: 1.865, y: -3.5649998}
-      - {x: 4.095, y: -8.955}
-      - {x: 3.5149999, y: -10.344999}
-      - {x: 2.135, y: -11.115}
 --- !u!114 &7790388280081641901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,3 +138,46 @@ MonoBehaviour:
     maxValue: 1
   battleColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   connectionEffect: {fileID: 8791221747511256837, guid: 94c556428c2e8234eb4cb9ad1ee877c1, type: 3}
+--- !u!60 &8017193597110406625
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4651794441779652700}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.821, y: 2.291}
+    newSize: {x: 8.21, y: 22.91}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.041500002, y: -1.1415}
+      - {x: -0.18550001, y: -1.0715001}
+      - {x: -0.2915, y: -0.9825001}
+      - {x: -0.1985, y: -0.6545}
+      - {x: -0.41050002, y: -0.2725}
+      - {x: -0.40950003, y: -0.1305}
+      - {x: -0.3115, y: 0.0075000003}
+      - {x: -0.3925, y: 0.98050004}
+      - {x: -0.2125, y: 1.1455001}
+      - {x: 0.12150001, y: 1.1045}
+      - {x: 0.3395, y: 0.92450005}
+      - {x: 0.3695, y: 0.6965}
+      - {x: 0.17850001, y: 0.11450001}
+      - {x: 0.29050002, y: -0.0505}
+      - {x: 0.18650001, y: -0.35650003}
+      - {x: 0.40950003, y: -0.89550006}
+      - {x: 0.3515, y: -1.0345}
+      - {x: 0.21350001, y: -1.1115}
