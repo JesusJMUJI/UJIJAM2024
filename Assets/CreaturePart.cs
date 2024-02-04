@@ -1,10 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CreaturePart : MonoBehaviour
 {
+	public GameObject hitEffect;
+	public GameObject deathEffect;
 	static float speedUpTime;
 	static bool slowedDown;
 	Rigidbody2D rb;
@@ -28,6 +29,9 @@ public class CreaturePart : MonoBehaviour
 	{
 		if(col.gameObject.layer == gameObject.layer){
 			return;
+		}
+		if(col.relativeVelocity.magnitude > 5){
+			Instantiate(hitEffect, transform.position,Quaternion.Euler(0,0,Random.Range(-45,45)));
 		}
 		CreaturePart otherPart = col.gameObject.GetComponentInParent<CreaturePart>();
 		if (!otherPart)
@@ -60,6 +64,7 @@ public class CreaturePart : MonoBehaviour
 			if (health <= 0)
 			{
 				Destroy(gameObject);
+				Instantiate(deathEffect, transform.position,Quaternion.Euler(0,0,Random.Range(-45,45)));
 			}
 		}
 	}

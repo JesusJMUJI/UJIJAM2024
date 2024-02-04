@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ConnectablePart : MonoBehaviour
 {
+
+	[SerializeField] GameObject hitEffect;
+	[SerializeField] GameObject deathEffect;
 	[SerializeField] PartAsset asset;
 	[SerializeField] NoiseSampler wigglerSampler;
 	[SerializeField] Color battleColor;
+	[SerializeField] Object connectionEffect;
 
 	List<Joint2D> connections = new List<Joint2D>();
 	Rigidbody2D rb;
@@ -44,6 +48,8 @@ public class ConnectablePart : MonoBehaviour
 	public CreaturePart ConvertToCreaturePart(){
 		CreaturePart part = gameObject.AddComponent<CreaturePart>();
 		part.AssignAsset(asset);
+		part.hitEffect = hitEffect;
+		part.deathEffect = deathEffect;
 		rb.mass = asset.mass;
 		rb.gravityScale = 1;
 
@@ -68,7 +74,7 @@ public class ConnectablePart : MonoBehaviour
 	}
 	public void Lock(){
 		Rigidbody2D[] contacts = connectionArea.GetCollidingBodies();
-		Debug.Log($"{contacts.Length} potential contacts");
+		// Debug.Log($"{contacts.Length} potential contacts");
 		foreach(Rigidbody2D contact in contacts){
 			CreateConnection(contact);
 		}
@@ -81,7 +87,7 @@ public class ConnectablePart : MonoBehaviour
 		if(!otherPart.IsLocked()){
 			return;
 		}
-		Debug.Log($"Connection");
+		// Debug.Log($"Connection");
 		Vector2 selfSurfacePoint = rb.ClosestPoint(other.position);
 		Vector2 otherSurfacePoint = other.ClosestPoint(rb.position);
 		Vector2 jointPos = (selfSurfacePoint + otherSurfacePoint) * 0.5f;
@@ -95,6 +101,8 @@ public class ConnectablePart : MonoBehaviour
 		joint.connectedAnchor = other.transform.InverseTransformPoint(jointPos);
 		AddConnection(joint);
 		otherPart.AddConnection(joint);
+
+		Instantiate(connectionEffect, jointPos,Quaternion.Euler(0,0,Random.Range(-45,45)));
 	}
 	public void Unlock(){
 		foreach(Joint2D joint in connections){

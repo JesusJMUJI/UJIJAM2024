@@ -175,3 +175,4 @@ MonoBehaviour:
     minValue: 0
     maxValue: 1
   battleColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  connectionEffect: {fileID: 8791221747511256837, guid: 94c556428c2e8234eb4cb9ad1ee877c1, type: 3}
