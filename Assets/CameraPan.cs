@@ -59,6 +59,13 @@ public class CameraPan : MonoBehaviour
 		
 		
 	}
+	void OnDrawGizmos(){
+		Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(HorizontalClamp.x, VerticalClamp.x,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(HorizontalClamp.x, VerticalClamp.y,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(HorizontalClamp.y, VerticalClamp.y,0), 1);
+        Gizmos.DrawSphere(transform.parent.position + new Vector3(HorizontalClamp.y, VerticalClamp.x,0), 1);
+	}
 }
 // Vector2 cursorPosition = Input.mousePosition;
 // cursorPosition.x /= Screen.width;
