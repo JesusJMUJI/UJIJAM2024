@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -64950007012260432}
   - component: {fileID: -1885328563452165342}
   - component: {fileID: -8525475239507194339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head_demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

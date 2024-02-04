@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6510224489336481254}
   - component: {fileID: -7441384341555365683}
   - component: {fileID: -1974108544774647724}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: L_arm_demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
