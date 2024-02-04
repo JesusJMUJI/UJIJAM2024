@@ -5,16 +5,8 @@ using UnityEngine;
 
 public class CreaturePart : MonoBehaviour
 {
-    const float realPhysicsTime = 0.02f;
-    const float realTime = 1;
 	static float speedUpTime;
 	static bool slowedDown;
-
-    static void SetTimeScale(float newTimeScale){
-        float delta = Time.timeScale/newTimeScale;
-        Time.timeScale = newTimeScale;
-        Time.fixedDeltaTime = newTimeScale * (realPhysicsTime/realTime);
-    }
 	Rigidbody2D rb;
 	public Rigidbody2D GetRigidbody(){
 		return rb;
@@ -49,14 +41,14 @@ public class CreaturePart : MonoBehaviour
 
 		if(!slowedDown){
 			slowedDown = true;
-			SetTimeScale(0.1f);
+			SlowMotion.LerpSlowDown(0.1f, 0.05f);
 		}
-		speedUpTime = Time.realtimeSinceStartup + 0.2f;
+		speedUpTime = Time.realtimeSinceStartup + 0.1f;
 	}
 	void Update(){
 		if(!slowedDown){return;}
 		if(Time.realtimeSinceStartup > speedUpTime){
-			SetTimeScale(1);
+			SlowMotion.LerpSpeedUp(0.2f);
 			slowedDown = false;
 		}
 	}
