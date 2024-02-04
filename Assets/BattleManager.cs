@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class BattleManager : Environment
 {
-
-	const float realPhysicsTime = 0.02f;
-    const float realTime = 1;
     [SerializeField] float creatureAttraction = 12f;
-
-    void SetTimeScale(float newTimeScale){
-        float delta = Time.timeScale/newTimeScale;
-        Time.timeScale = newTimeScale;
-        Time.fixedDeltaTime = newTimeScale * (realPhysicsTime/realTime);
-    }
 	protected override void OnEnabled(){
 		cameraController.enabled = true;
 		LoadEnemy();
@@ -70,11 +61,11 @@ public class BattleManager : Environment
 		playerCreature.PullTowards(enemyCreature.GetCenter(),creatureAttraction);
 		if(enemyCreature.GetParts().Length == 0){
 			GameManager.instance.SwitchToCollectionPicker();
-			SetTimeScale(1);
+			SlowMotion.LerpSpeedUp(0.2f);
 		}
 		else if(playerCreature.GetParts().Length == 0){
 			//Game Over
-			SetTimeScale(1);
+			SlowMotion.LerpSpeedUp(0.2f);
 		}
 	}
 	[System.Serializable]

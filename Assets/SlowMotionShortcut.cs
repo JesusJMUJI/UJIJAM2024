@@ -12,9 +12,9 @@ public class SlowMotionShortcut : MonoBehaviour
 		
 	}
 	public void LerpSlowDown(float speed, float duration){
-		SlowMotion.LerpSlowDown(speed, duration, this);
+		SlowMotion.LerpSlowDown(speed, duration);
 	}
 	public void LerpSpeedUp(float duration){
-		SlowMotion.LerpSpeedUp(duration, this);
+		SlowMotion.LerpSpeedUp(duration);
 	}
 }
