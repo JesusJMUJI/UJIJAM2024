@@ -15,15 +15,15 @@ public class CreatureEditor : Environment
 			Destroy(child.gameObject);
 		}
 	}
-	public void AssignCollection(PartCollection collection){
+	public void AssignCollection(PartPreview[] selectedParts, Vector2 relativePosition){
 		ClearParts();
 
-		parts = new ConnectablePart[collection.parts.Length];
-		for(int i = 0; i < collection.parts.Length; i++){
-			PartCollection.Part part = collection.parts[i];
-			Vector2 relativePosition = part.element.localPosition;
-			Quaternion rotation = part.element.rotation;
-			parts[i] = Instantiate(part.asset.editorObject, relativePosition,rotation, partContainer);
+		parts = new ConnectablePart[selectedParts.Length];
+		for(int i = 0; i < selectedParts.Length; i++){
+			PartPreview part = selectedParts[i];
+			Vector2 localPosition = (Vector2)part.transform.localPosition - relativePosition;
+			Quaternion rotation = part.transform.rotation;
+			parts[i] = Instantiate(part.asset.editorObject, localPosition,rotation, partContainer);
 		}
 	}
 	[SerializeField] Transform partContainer;
