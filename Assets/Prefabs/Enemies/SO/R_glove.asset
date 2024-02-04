@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   editorObject: {fileID: 5674513090462014895, guid: f5b02487150e6a048859ab264d429602, type: 3}
   previewObject: {fileID: 1799994239822606036, guid: 0839a39be49143e4d99c82e47bfc1a40, type: 3}
-  health: 0
-  damage: 0
+  health: 10
+  damage: 5
   mass: 1
-  speed: 10
-  angleRange: {x: 0, y: 0}
+  speed: 200
+  angleRange: {x: -100, y: 100}
