@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8890167594034402703}
   - component: {fileID: 3017559143691535962}
   - component: {fileID: 7810285053941969898}
-  - component: {fileID: 1498500518519257916}
   - component: {fileID: -5159203177089880095}
+  - component: {fileID: 4013967307759235538}
   m_Layer: 0
   m_Name: R_leg_demon
   m_TagString: Untagged
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3f7acb3fddf64cf45857506a344730e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: -9182566004782305285, guid: 873e91a12d56b2b43a1c8a278468a663, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,13 +102,43 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &1498500518519257916
+--- !u!114 &-5159203177089880095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768576871855601504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 2468753157534840840, guid: 927d7e23a66f60f4189b31c11109effe, type: 3}
+  deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
+  asset: {fileID: 11400000, guid: 2016bd8fb5ef7b2468a5bcd4360509e4, type: 2}
+  wigglerSampler:
+    noiseScale: 0.2
+    scrollSpeed: {x: 3, y: 0}
+    offset: {x: 0, y: 0}
+    octaves: 1
+    lacunarity: 1
+    persistance: 0
+    filter: 2
+    exponent: 0
+    slope: 2
+    falloff: 0
+    minValue: 0
+    maxValue: 1
+  battleColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  connectionEffect: {fileID: 8791221747511256837, guid: 94c556428c2e8234eb4cb9ad1ee877c1, type: 3}
+--- !u!60 &4013967307759235538
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +155,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.53, y: 24.97}
+    oldSize: {x: 0.953, y: 2.497}
     newSize: {x: 9.53, y: 24.97}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,46 +163,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.625, y: -10.094999}
-      - {x: 1.685, y: -12.355}
-      - {x: -3.0249999, y: -10.855}
-      - {x: -1.435, y: -4.495}
-      - {x: -3.0449998, y: -2.395}
-      - {x: -2.085, y: 2.445}
-      - {x: -4.765, y: 8.255}
-      - {x: -4.085, y: 10.115}
-      - {x: 1.415, y: 12.485}
-      - {x: 3.2749999, y: 11.384999}
-      - {x: 2.725, y: 3.995}
-      - {x: 4.685, y: -0.114999995}
-      - {x: 3.0449998, y: -4.745}
---- !u!114 &-5159203177089880095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8768576871855601504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  deathEffect: {fileID: 0}
-  asset: {fileID: 11400000, guid: 2016bd8fb5ef7b2468a5bcd4360509e4, type: 2}
-  wigglerSampler:
-    noiseScale: 0
-    scrollSpeed: {x: 0, y: 0}
-    offset: {x: 0, y: 0}
-    octaves: 0
-    lacunarity: 0
-    persistance: 0
-    filter: 0
-    exponent: 0
-    slope: 0
-    falloff: 0
-    minValue: 0
-    maxValue: 0
-  battleColor: {r: 0, g: 0, b: 0, a: 0}
-  connectionEffect: {fileID: 0}
+    - - {x: 0.46250004, y: -1.0095}
+      - {x: 0.1685, y: -1.2355001}
+      - {x: -0.3025, y: -1.0855}
+      - {x: -0.1435, y: -0.44950002}
+      - {x: -0.3045, y: -0.23950002}
+      - {x: -0.20850001, y: 0.24450001}
+      - {x: -0.47650003, y: 0.8255}
+      - {x: -0.40850002, y: 1.0115}
+      - {x: 0.14150001, y: 1.2485001}
+      - {x: 0.32750002, y: 1.1385001}
+      - {x: 0.2725, y: 0.3995}
+      - {x: 0.46850002, y: -0.011500001}
+      - {x: 0.3045, y: -0.47450003}

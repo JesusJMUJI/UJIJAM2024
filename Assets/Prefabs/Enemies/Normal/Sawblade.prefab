@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4385167226505462828}
   - component: {fileID: 8447556403473586493}
   - component: {fileID: -4590196293180024707}
-  - component: {fileID: 8150328942960288952}
   - component: {fileID: 3652761187449983587}
+  - component: {fileID: -5672747733426753817}
   m_Layer: 0
   m_Name: Sawblade
   m_TagString: Untagged
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3f7acb3fddf64cf45857506a344730e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 15
   m_Sprite: {fileID: 5352106181571179250, guid: 873e91a12d56b2b43a1c8a278468a663, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,13 +102,43 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &8150328942960288952
+--- !u!114 &3652761187449983587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286094778542484393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 2468753157534840840, guid: 927d7e23a66f60f4189b31c11109effe, type: 3}
+  deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
+  asset: {fileID: 11400000, guid: d06dfb1f185092842ac11b0e4a1c7b9b, type: 2}
+  wigglerSampler:
+    noiseScale: 0.2
+    scrollSpeed: {x: 3, y: 0}
+    offset: {x: 0, y: 0}
+    octaves: 1
+    lacunarity: 1
+    persistance: 0
+    filter: 2
+    exponent: 0
+    slope: 2
+    falloff: 0
+    minValue: 0
+    maxValue: 1
+  battleColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  connectionEffect: {fileID: 8791221747511256837, guid: 94c556428c2e8234eb4cb9ad1ee877c1, type: 3}
+--- !u!60 &-5672747733426753817
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +155,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 22.02, y: 20.2}
+    oldSize: {x: 2.202, y: 2.02}
     newSize: {x: 22.02, y: 20.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,45 +163,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.45, y: -2.34}
-      - {x: 1.81, y: -1.12}
-      - {x: -8.49, y: -9.8}
-      - {x: -10.75, y: -9.099999}
-      - {x: -11.01, y: -7.0099998}
-      - {x: -9.059999, y: -6.42}
-      - {x: 0.02, y: 1.55}
-      - {x: -1.12, y: 3.84}
-      - {x: 2.8, y: 9.469999}
-      - {x: 6.46, y: 9.61}
-      - {x: 10.82, y: 4.8399997}
-      - {x: 8.83, y: -0.42}
---- !u!114 &3652761187449983587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286094778542484393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  deathEffect: {fileID: 0}
-  asset: {fileID: 11400000, guid: d06dfb1f185092842ac11b0e4a1c7b9b, type: 2}
-  wigglerSampler:
-    noiseScale: 0
-    scrollSpeed: {x: 0, y: 0}
-    offset: {x: 0, y: 0}
-    octaves: 0
-    lacunarity: 0
-    persistance: 0
-    filter: 0
-    exponent: 0
-    slope: 0
-    falloff: 0
-    minValue: 0
-    maxValue: 0
-  battleColor: {r: 0, g: 0, b: 0, a: 0}
-  connectionEffect: {fileID: 0}
+    - - {x: 0.44500002, y: -0.23400001}
+      - {x: 0.18100001, y: -0.112}
+      - {x: -0.84900004, y: -0.98}
+      - {x: -1.075, y: -0.91}
+      - {x: -1.1010001, y: -0.70100003}
+      - {x: -0.906, y: -0.642}
+      - {x: 0.002, y: 0.155}
+      - {x: -0.112, y: 0.384}
+      - {x: 0.28, y: 0.947}
+      - {x: 0.646, y: 0.961}
+      - {x: 1.082, y: 0.48400003}
+      - {x: 0.883, y: -0.042000003}

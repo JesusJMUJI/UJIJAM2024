@@ -14,7 +14,7 @@ public class CameraFrameController : MonoBehaviour
 	public float GetSize(){
 
 		float trueSize = size + GameManager.instance.cycleIndex*0.5f;
-		trueSize = Mathf.Min(trueSize, 8f);
+		trueSize = Mathf.Min(trueSize, 9f);
 		return trueSize;
 	}
 	void Start()

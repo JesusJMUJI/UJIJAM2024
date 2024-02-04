@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2849124545440968684}
   - component: {fileID: 5140062796768101696}
   - component: {fileID: 2474219121610820857}
-  - component: {fileID: -537689993635657906}
   - component: {fileID: 5591727447651430269}
+  - component: {fileID: 5923331384033566341}
   m_Layer: 0
   m_Name: R_arm_demon
   m_TagString: Untagged
@@ -55,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3f7acb3fddf64cf45857506a344730e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: -6561366280743165889, guid: 873e91a12d56b2b43a1c8a278468a663, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,13 +102,43 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!60 &-537689993635657906
+--- !u!114 &5591727447651430269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663329553698775156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitEffect: {fileID: 2468753157534840840, guid: 927d7e23a66f60f4189b31c11109effe, type: 3}
+  deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
+  asset: {fileID: 11400000, guid: 195adc8f449634e41b7630da9be3c209, type: 2}
+  wigglerSampler:
+    noiseScale: 0.2
+    scrollSpeed: {x: 3, y: 0}
+    offset: {x: 0, y: 0}
+    octaves: 1
+    lacunarity: 1
+    persistance: 0
+    filter: 2
+    exponent: 0
+    slope: 2
+    falloff: 0
+    minValue: 0
+    maxValue: 1
+  battleColor: {r: 1, g: 1, b: 1, a: 0.5882353}
+  connectionEffect: {fileID: 8791221747511256837, guid: 94c556428c2e8234eb4cb9ad1ee877c1, type: 3}
+--- !u!60 &5923331384033566341
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +155,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 26.98, y: 15.74}
+    oldSize: {x: 2.698, y: 1.574}
     newSize: {x: 26.98, y: 15.74}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -133,53 +163,23 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.25, y: -6.92}
-      - {x: 5.29, y: -7.7799997}
-      - {x: 3.3, y: -7.35}
-      - {x: 1.63, y: -5.12}
-      - {x: -8.99, y: -3.35}
-      - {x: -9.55, y: -5.46}
-      - {x: -13.44, y: -4.61}
-      - {x: -12.09, y: 0.75}
-      - {x: -8.2, y: -0.17999999}
-      - {x: -8.599999, y: -2.45}
-      - {x: 1.61, y: -4.12}
-      - {x: 4.11, y: -2.58}
-      - {x: 5.2599998, y: 2.1}
-      - {x: -3.4499998, y: 3.33}
-      - {x: -5.0699997, y: 6.02}
-      - {x: -3.3899999, y: 7.75}
-      - {x: 7.79, y: 6.17}
-      - {x: 9.42, y: 4.25}
-      - {x: 7.94, y: -3.86}
-      - {x: 13.309999, y: -6.45}
---- !u!114 &5591727447651430269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5663329553698775156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f5c4e1813314a84d9d6ec0edc768ad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitEffect: {fileID: 0}
-  deathEffect: {fileID: 0}
-  asset: {fileID: 11400000, guid: 195adc8f449634e41b7630da9be3c209, type: 2}
-  wigglerSampler:
-    noiseScale: 0
-    scrollSpeed: {x: 0, y: 0}
-    offset: {x: 0, y: 0}
-    octaves: 0
-    lacunarity: 0
-    persistance: 0
-    filter: 0
-    exponent: 0
-    slope: 0
-    falloff: 0
-    minValue: 0
-    maxValue: 0
-  battleColor: {r: 0, g: 0, b: 0, a: 0}
-  connectionEffect: {fileID: 0}
+    - - {x: 1.225, y: -0.69200003}
+      - {x: 0.52900004, y: -0.77800006}
+      - {x: 0.33, y: -0.735}
+      - {x: 0.163, y: -0.512}
+      - {x: -0.89900005, y: -0.335}
+      - {x: -0.95500004, y: -0.546}
+      - {x: -1.3440001, y: -0.46100003}
+      - {x: -1.2090001, y: 0.075}
+      - {x: -0.82000005, y: -0.018000001}
+      - {x: -0.86, y: -0.245}
+      - {x: 0.16100001, y: -0.41200003}
+      - {x: 0.411, y: -0.25800002}
+      - {x: 0.526, y: 0.21000001}
+      - {x: -0.34500003, y: 0.333}
+      - {x: -0.507, y: 0.60200006}
+      - {x: -0.33900002, y: 0.77500004}
+      - {x: 0.77900004, y: 0.61700004}
+      - {x: 0.94200003, y: 0.425}
+      - {x: 0.794, y: -0.386}
+      - {x: 1.3310001, y: -0.64500004}

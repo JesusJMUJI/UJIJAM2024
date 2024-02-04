@@ -17,8 +17,8 @@ public class CollectionPicker : Environment
 		collectionSelected = false;
 		cameraFrame.enabled = true;
 		cameraLerper.Reset();
-		int amount = 30 + GameManager.instance.cycleIndex*10;
-		amount = Mathf.Min(amount, 50);
+		int amount = 30 + GameManager.instance.cycleIndex*5;
+		amount = Mathf.Min(amount, 80);
 		GenerateParts(amount);
 	}
 	protected override void OnDisabled(){
