@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class CameraPan : MonoBehaviour
 {
+	public void Reset(Vector2 localPosition, float zoom){
+		targetPosition = localPosition;
+		transform.localPosition = new Vector3(localPosition.x,localPosition.y,-10);
+		targetSize = zoom;
+		camera.orthographicSize = zoom;
+	}
 	Camera camera;
 	[SerializeField] float scrollSpeed;
 	[SerializeField] float scrollLerpSpeed;
@@ -20,7 +26,7 @@ public class CameraPan : MonoBehaviour
 		camera = gameObject.GetComponent<Camera>();
 		targetSize = camera.orthographicSize;
 		lastCursorPosition = camera.ScreenToWorldPoint(Input.mousePosition);
-		targetPosition = transform.position;
+		targetPosition = transform.localPosition;
 	}
 	Vector2 lastCursorPosition;
 	Vector3 targetPosition;
@@ -48,7 +54,8 @@ public class CameraPan : MonoBehaviour
 			lastCursorPosition = CursorPosition;
 			
 		}
-		transform.position = Vector3.Lerp(transform.position, targetPosition, panLerpSpeed*Time.deltaTime);	
+		targetPosition.z = transform.localPosition.z;
+		transform.localPosition = Vector3.Lerp(transform.localPosition, targetPosition, panLerpSpeed*Time.deltaTime);	
 		
 		
 	}

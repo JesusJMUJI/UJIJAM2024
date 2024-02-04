@@ -8,8 +8,7 @@ public class HingeWiggler : MonoBehaviour
 	[SerializeField] HingeJoint2D joint;
 	[SerializeField] NoiseSampler sampler;
 	[SerializeField] float seed;
-	[SerializeField] float speed;
-	[SerializeField] Vector2 angleRange;
+	[SerializeField] PartAsset asset;
 	public void SetSampler(NoiseSampler _sampler){
 		sampler = _sampler;
 	}
@@ -19,11 +18,8 @@ public class HingeWiggler : MonoBehaviour
 	public void SetSeed(float _seed){
 		seed = _seed;
 	}
-	public void SetSpeed(float _speed){
-		speed = _speed;
-	}
-	public void SetAngleRange(Vector2 _angleRange){
-		angleRange = _angleRange;
+	public void SetAsset(PartAsset _asset){
+		asset = _asset;
 	}
 	void Start(){
 		joint.useMotor = true;
@@ -39,12 +35,12 @@ public class HingeWiggler : MonoBehaviour
 
 		float fase = sampler.SampleAt((Vector2)transform.position + Vector2.down*seed*12.445f);
 
-		float targetAngle = Mathf.Lerp(angleRange.x, angleRange.y, fase);
+		float targetAngle = Mathf.Lerp(asset.angleRange.x, asset.angleRange.y, fase);
 		float deltaAngle = Mathf.DeltaAngle(joint.jointAngle,-targetAngle);
 		float angleFactor = Mathf.Clamp(deltaAngle/slowdownAngle,-1,1);
 		JointMotor2D motor = joint.motor;
-		motor.maxMotorTorque = 500;
-		motor.motorSpeed = Mathf.LerpUnclamped(0,speed,angleFactor);
+		motor.maxMotorTorque = 4000;
+		motor.motorSpeed = Mathf.LerpUnclamped(0,asset.speed,angleFactor);
 		joint.motor = motor;
 	}
 }

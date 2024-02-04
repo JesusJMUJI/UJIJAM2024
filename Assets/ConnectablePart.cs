@@ -52,10 +52,9 @@ public class ConnectablePart : MonoBehaviour
 		foreach(HingeJoint2D joint in joints){
 			HingeWiggler wiggler = gameObject.AddComponent<HingeWiggler>();
 			wiggler.SetHinge(joint);
-			wiggler.SetSeed(seed);	
-			wiggler.SetSpeed(asset.speed);
+			wiggler.SetSeed(seed);
 			wiggler.SetSampler(new NoiseSampler(wigglerSampler));
-			wiggler.SetAngleRange(asset.angleRange);
+			wiggler.SetAsset(asset);
 		}
 		
 		Freeze(false);

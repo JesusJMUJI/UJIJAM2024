@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	public int cycleIndex = 0;
+	public int cycleIndex = -1;
 	public static GameManager instance;
 	void Awake(){
 		if(instance != null){
@@ -15,9 +15,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField] CollectionPicker collectionPicker;
 	[SerializeField] CreatureEditor editor;
 	[SerializeField] BattleManager battleManager;
-	public void SwitchToEditor(PartPreview[] selectedParts, Vector2 relativePosition){
+	public void SwitchToEditor(PartPreview[] selectedParts, Vector2 relativePosition, float frameZoom){
 		collectionPicker.Disable();
-		editor.AssignCollection(selectedParts, relativePosition);
+		editor.AssignCollection(selectedParts, relativePosition,frameZoom);
 		editor.Enable();
 	}
 	public void SwitchToCollectionPicker(){

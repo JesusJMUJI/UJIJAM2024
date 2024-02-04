@@ -3,32 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreatureEditor : Environment
-{
+{	
+	[SerializeField] bool CREATE_ENEMY;
 	public static bool isEditing;
 	protected override void OnEnabled(){
 		//TODO reset camera
 	}
 	protected override void OnDisabled(){
 	}
+	[SerializeField] CameraPan cameraController;
 	void ClearParts(){
 		foreach (Transform child in partContainer) {
 			Destroy(child.gameObject);
 		}
 	}
-	public void AssignCollection(PartPreview[] selectedParts, Vector2 relativePosition){
+	public void AssignCollection(PartPreview[] selectedParts, Vector2 relativePosition, float frameZoom){
 		ClearParts();
 
 		parts = new ConnectablePart[selectedParts.Length];
 		for(int i = 0; i < selectedParts.Length; i++){
 			PartPreview part = selectedParts[i];
-			Vector2 localPosition = (Vector2)part.transform.localPosition - relativePosition;
+			Vector2 localPosition = (Vector2)part.transform.localPosition;
 			Quaternion rotation = part.transform.rotation;
 			parts[i] = Instantiate(part.asset.editorObject, localPosition,rotation, partContainer);
+		}
+		cameraController.Reset(relativePosition, frameZoom);
+	}
+	void PropagateLayer(GameObject obj, int newLayer)
+	{
+		if (!obj){return;}
+		obj.layer = newLayer;
+	   
+		foreach (Transform child in obj.transform){
+			if (!child){continue;}
+			PropagateLayer(child.gameObject, newLayer);
 		}
 	}
 	[SerializeField] Transform partContainer;
 	public void CompleteCreature(){
 		Creature creature = ExtractCreature();
+		creature.CompensateOffset();
+		if(CREATE_ENEMY){
+			PropagateLayer(creature.gameObject, 7);
+			Debug.LogError("Enemy Created!", creature.gameObject);
+		}
 		GameManager.instance.SwitchToBattle(creature);
 	}
 	Creature ExtractCreature(){

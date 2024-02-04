@@ -7,6 +7,18 @@ using UnityEngine.Serialization;
 
 public class CameraLerper : MonoBehaviour
 {
+	float defaultSize;
+	Vector3 defaultPosition;
+	public void Reset(){
+		camera.orthographicSize = defaultSize;
+		transform.position = defaultPosition;
+		target = null;
+	}
+	void Awake(){
+		defaultSize = camera.orthographicSize;
+		defaultPosition = transform.position;
+	}
+
 	Transform target = null;
 	float targetSize;
 	float lerpStartTime;

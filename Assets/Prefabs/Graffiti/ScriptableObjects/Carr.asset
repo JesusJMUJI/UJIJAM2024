@@ -17,5 +17,5 @@ MonoBehaviour:
   health: 10
   damage: 5
   mass: 1
-  speed: 40
-  angleRange: {x: -75, y: 75}
+  speed: 200
+  angleRange: {x: -100, y: 100}

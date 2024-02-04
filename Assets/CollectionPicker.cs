@@ -13,10 +13,9 @@ public class CollectionPicker : Environment
 	[SerializeField] float mapPadding = 3;
 	[SerializeField] float zoomDuration = 0.8f;
 	protected override void OnEnabled(){
-		//reset camera
-		// cameraLerper.enabled = true;
 		collectionSelected = false;
 		cameraFrame.enabled = true;
+		cameraLerper.Reset();
 		GenerateParts(30);
 	}
 	protected override void OnDisabled(){
@@ -30,6 +29,7 @@ public class CollectionPicker : Environment
 		}
 	}
 	void GenerateParts(int amount){
+		ClearCollections();
 		List<PartAsset> availableParts = new List<PartAsset>(partAssets);
 		Vector2[] spawnPoints = GenerateSpawnPoints(amount);
 		foreach(Vector2 point in spawnPoints){
@@ -37,7 +37,7 @@ public class CollectionPicker : Environment
 			PartAsset asset = availableParts[partIndex];
 			availableParts.RemoveAt(partIndex);
 			Quaternion rotation = Quaternion.Euler(0, 0, Random.Range(-30, 30));
-			Transform part = Instantiate(asset.previewObject, point, rotation, transform);
+			Transform part = Instantiate(asset.previewObject, point, rotation, collectionContainer);
 			part.gameObject.AddComponent<PartPreview>().asset = asset;
 		}
 		
@@ -87,7 +87,7 @@ public class CollectionPicker : Environment
 		cameraLerper.ZoomTowards(cameraFrame.transform, cameraFrame.GetSize()/2, zoomDuration);
 		yield return new WaitForSeconds(zoomDuration);
 
-		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition);
+		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition,cameraFrame.GetSize()/2);
 	}
 
 }

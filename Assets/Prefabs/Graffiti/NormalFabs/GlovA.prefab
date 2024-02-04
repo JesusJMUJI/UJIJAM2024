@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3262908115889697398}
   - component: {fileID: 5413517308508118929}
   - component: {fileID: 7614026876671085490}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GlovA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,13 +100,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &5413517308508118929
 PolygonCollider2D:
@@ -155,15 +155,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: 11400000, guid: 8d404fec852f29940a9d747960800f19, type: 2}
   wigglerSampler:
-    noiseScale: 0.1
-    scrollSpeed: {x: 4, y: 3}
+    noiseScale: 0.4
+    scrollSpeed: {x: 4, y: 0}
     offset: {x: 0, y: 0}
     octaves: 3
     lacunarity: 1.5
     persistance: 0
-    filter: 0
+    filter: 2
     exponent: 0
-    slope: 8.43
+    slope: 2.22
     falloff: 0
     minValue: 0
     maxValue: 1

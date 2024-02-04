@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class BattleManager : Environment
 {
+
+	const float realPhysicsTime = 0.02f;
+    const float realTime = 1;
+
+    void SetTimeScale(float newTimeScale){
+        float delta = Time.timeScale/newTimeScale;
+        Time.timeScale = newTimeScale;
+        Time.fixedDeltaTime = newTimeScale * (realPhysicsTime/realTime);
+    }
 	protected override void OnEnabled(){
 		cameraController.enabled = true;
 		LoadEnemy();
@@ -12,10 +21,10 @@ public class BattleManager : Environment
 	protected override void OnDisabled(){
 		cameraController.enabled = false;
 		if(enemyCreature){
-			Destroy(enemyCreature);
+			Destroy(enemyCreature.gameObject);
 		}
 		if(playerCreature){
-			Destroy(playerCreature);
+			Destroy(playerCreature.gameObject);
 		}
 	}
 	[SerializeField] CameraController cameraController;
@@ -44,6 +53,28 @@ public class BattleManager : Environment
 		int enemyTierIndex = GameManager.instance.cycleIndex;
 		enemyTierIndex = Mathf.Min(enemyTiers.Length-1, enemyTierIndex);
 		return enemyTiers[enemyTierIndex].GetRandom();
+	}
+	void Update(){
+		if(!active){return;}
+		if(enemyCreature == null){
+			return;
+		}
+		if(playerCreature == null){
+			return;
+		}
+		enemyCreature.UpdateParts();
+		playerCreature.UpdateParts();
+		enemyCreature.PullTowards(playerCreature.GetCenter());
+
+		playerCreature.PullTowards(enemyCreature.GetCenter());
+		if(enemyCreature.GetParts().Length == 0){
+			GameManager.instance.SwitchToCollectionPicker();
+			SetTimeScale(1);
+		}
+		else if(playerCreature.GetParts().Length == 0){
+			//Game Over
+			SetTimeScale(1);
+		}
 	}
 	[System.Serializable]
 	public class EnemyTier{

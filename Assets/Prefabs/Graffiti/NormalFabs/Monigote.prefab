@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 386427525423316635}
   - component: {fileID: -7427767247564182121}
   - component: {fileID: 5615476386394707509}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Monigote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,13 +100,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &-7427767247564182121
 PolygonCollider2D:
@@ -154,15 +154,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: 11400000, guid: 5eea04e362ec4a04bb8370e87f5d5f18, type: 2}
   wigglerSampler:
-    noiseScale: 0.1
-    scrollSpeed: {x: 4, y: 3}
+    noiseScale: 0.4
+    scrollSpeed: {x: 4, y: 0}
     offset: {x: 0, y: 0}
     octaves: 3
     lacunarity: 1.5
     persistance: 0
-    filter: 0
+    filter: 2
     exponent: 0
-    slope: 8.43
+    slope: 2.22
     falloff: 0
     minValue: 0
     maxValue: 1

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7170475679615512128}
   - component: {fileID: -8632298709112974821}
   - component: {fileID: 6014773671794162892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,13 +100,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &-8632298709112974821
 PolygonCollider2D:
@@ -151,15 +151,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: 11400000, guid: dc6e91c1ab831724db0b7e7f435c0acd, type: 2}
   wigglerSampler:
-    noiseScale: 0.1
-    scrollSpeed: {x: 4, y: 3}
+    noiseScale: 0.4
+    scrollSpeed: {x: 4, y: 0}
     offset: {x: 0, y: 0}
     octaves: 3
     lacunarity: 1.5
     persistance: 0
-    filter: 0
+    filter: 2
     exponent: 0
-    slope: 8.43
+    slope: 2.22
     falloff: 0
     minValue: 0
     maxValue: 1

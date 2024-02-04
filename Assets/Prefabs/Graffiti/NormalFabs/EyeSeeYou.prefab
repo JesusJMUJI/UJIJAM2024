@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1582175058357363611}
   - component: {fileID: -3976957281435659404}
   - component: {fileID: -7286625954622546205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EyeSeeYou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,13 +100,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!60 &-3976957281435659404
 PolygonCollider2D:
@@ -162,15 +162,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asset: {fileID: 11400000, guid: cfe9ba0119713e5448432ee98e3f64cb, type: 2}
   wigglerSampler:
-    noiseScale: 0.1
-    scrollSpeed: {x: 4, y: 3}
+    noiseScale: 0.4
+    scrollSpeed: {x: 4, y: 0}
     offset: {x: 0, y: 0}
     octaves: 3
     lacunarity: 1.5
     persistance: 0
-    filter: 0
+    filter: 2
     exponent: 0
-    slope: 8.43
+    slope: 2.22
     falloff: 0
     minValue: 0
     maxValue: 1
