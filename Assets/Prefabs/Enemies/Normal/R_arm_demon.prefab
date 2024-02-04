@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2474219121610820857}
   - component: {fileID: 5591727447651430269}
   - component: {fileID: 5923331384033566341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: R_arm_demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
