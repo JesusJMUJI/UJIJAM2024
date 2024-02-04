@@ -34,7 +34,7 @@ ScriptedImporter:
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
     spritePixelsToUnits: 100
-    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteBorder: {x: 764, y: 361, z: 748, w: 343}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
     cubemapConvolution: 0
@@ -69,18 +69,18 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   spriteImportData:
-  - name: 
+  - name: Camara_1
     originalName: 
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 764, y: 361, z: 748, w: 343}
     rect:
       serializedVersion: 2
       x: 0
       y: 0
-      width: 0
-      height: 0
-    spriteID: 
+      width: 1920
+      height: 1080
+    spriteID: 954fb9761f8f47543b3175940533fa33
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -97,36 +97,14 @@ ScriptedImporter:
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
-    border: {x: 196, y: 58, z: 172, w: 87}
+    border: {x: 345, y: 399, z: 345, w: 340}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 936
-      width: 825
-      height: 878
-    spriteID: e4577a8fb90e72d4a8b18fd6834d5100
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 4, y: 936}
-    spritePosition: {x: 545, y: 108}
-  - name: Capa 1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 254, y: 281, z: 259, w: 271}
-    rect:
-      serializedVersion: 2
-      x: 4
+      x: 2
       y: 4
-      width: 924
-      height: 924
-    spriteID: e0e50344f6e411547838d18536ffac41
+      width: 929
+      height: 925
+    spriteID: e4577a8fb90e72d4a8b18fd6834d5100
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -199,7 +177,7 @@ ScriptedImporter:
   characterMode: 1
   documentPivot: {x: 0, y: 0}
   documentAlignment: 7
-  importHiddenLayers: 0
+  importHiddenLayers: 1
   layerMappingOption: 2
   generatePhysicsShape: 0
   paperDollMode: 0
@@ -217,16 +195,6 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: e4577a8fb90e72d4a8b18fd6834d5100
     layerID: 4
-    mosaicPosition: {x: 4, y: 936}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
-  - name: Capa 1
-    spriteName: Capa 1
-    isGroup: 0
-    parentIndex: -1
-    spriteID: e0e50344f6e411547838d18536ffac41
-    layerID: 3
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
