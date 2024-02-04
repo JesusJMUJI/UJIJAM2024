@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 		}
 		instance = this;
 	}
+
+	[SerializeField] AudioSource battleMusic;
+	[SerializeField] AudioSource menuMisic;
 	[SerializeField] CollectionPicker collectionPicker;
 	[SerializeField] CreatureEditor editor;
 	[SerializeField] BattleManager battleManager;
@@ -25,11 +28,18 @@ public class GameManager : MonoBehaviour
 		battleManager.Disable();
 		collectionPicker.Enable();
 
+		battleMusic.enabled = false;
+		menuMisic.enabled = true;
+		menuMisic.Play();
+
 	}
 	public void SwitchToBattle(Creature playerCreature){
 		collectionPicker.Disable();
 		battleManager.SetPlayerCreature(playerCreature);
 		battleManager.Enable();
+		menuMisic.enabled = false;
+		battleMusic.enabled = true;
+		battleMusic.Play();
 	}
 	void Start(){
 		SwitchToCollectionPicker();
