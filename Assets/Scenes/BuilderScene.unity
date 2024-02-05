@@ -3318,16 +3318,64 @@ MonoBehaviour:
   cameraController: {fileID: 778474519}
   enemyTiers:
   - enemyCreatures:
+    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
+    - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
     - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
     - {fileID: 6728001308206087058, guid: db04b7920b577dc4e908a5ec95688ea2, type: 3}
+    - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
+    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
+    - {fileID: 5486807253471227545, guid: d2422ddd594cbcd48ae4eaf0d963d361, type: 3}
   - enemyCreatures:
-    - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
     - {fileID: 6728001308206087058, guid: db04b7920b577dc4e908a5ec95688ea2, type: 3}
+    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
+    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
+    - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
+    - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
+    - {fileID: 2077152378332095014, guid: c0a5bb64d94d37446baf0234402fa85c, type: 3}
+    - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
   - enemyCreatures:
-    - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
-    - {fileID: 6728001308206087058, guid: db04b7920b577dc4e908a5ec95688ea2, type: 3}
-    - {fileID: 820367862671134503, guid: cb9db15ca0cc28a4e896be2b0bf7e9c4, type: 3}
+    - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
+    - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
+    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
+    - {fileID: 4578187080373426237, guid: 572e50e15f6b3504a9726b1915623c37, type: 3}
+    - {fileID: 6834537868846202852, guid: 131cd7f6e5d01f743a948678d6d2af66, type: 3}
+    - {fileID: 6178866796554985316, guid: 349205e2f7afa9343b1fe19e623f0399, type: 3}
+    - {fileID: 5378883744122401716, guid: 2a42c038e72b6c541a093366f85bca9e, type: 3}
+    - {fileID: 2077152378332095014, guid: c0a5bb64d94d37446baf0234402fa85c, type: 3}
+  - enemyCreatures:
     - {fileID: 2091808933829036162, guid: 15b1102463810894e863ccde1a6956b5, type: 3}
+    - {fileID: 820367862671134503, guid: cb9db15ca0cc28a4e896be2b0bf7e9c4, type: 3}
+    - {fileID: 6178866796554985316, guid: 349205e2f7afa9343b1fe19e623f0399, type: 3}
+    - {fileID: 2077152378332095014, guid: c0a5bb64d94d37446baf0234402fa85c, type: 3}
+    - {fileID: 4578187080373426237, guid: 572e50e15f6b3504a9726b1915623c37, type: 3}
+  - enemyCreatures:
+    - {fileID: 2091808933829036162, guid: 15b1102463810894e863ccde1a6956b5, type: 3}
+    - {fileID: 5486807253471227545, guid: d2422ddd594cbcd48ae4eaf0d963d361, type: 3}
+    - {fileID: 2077152378332095014, guid: c0a5bb64d94d37446baf0234402fa85c, type: 3}
+    - {fileID: 3231848195828960285, guid: 004bad3e6b8853e41a1d0dcac68f13ef, type: 3}
+    - {fileID: 5792246784735283416, guid: eb9fd9e84b31b4e4cb6432ecdfa26086, type: 3}
+  - enemyCreatures:
+    - {fileID: 5378883744122401716, guid: 2a42c038e72b6c541a093366f85bca9e, type: 3}
+    - {fileID: 2091808933829036162, guid: 15b1102463810894e863ccde1a6956b5, type: 3}
+    - {fileID: 2091808933829036162, guid: 15b1102463810894e863ccde1a6956b5, type: 3}
+    - {fileID: 6154985450221626161, guid: 1d4bc4d6c3c5a934c95a9482cd101614, type: 3}
+    - {fileID: 6178866796554985316, guid: 349205e2f7afa9343b1fe19e623f0399, type: 3}
+    - {fileID: 3663448929658839627, guid: c00d1d257e939a8449127208d47872b7, type: 3}
+    - {fileID: 5776902988899507481, guid: 643c59a661d2f084f8c1a45fa52dab18, type: 3}
+  - enemyCreatures:
+    - {fileID: 8082526587725730646, guid: 04f0a6eb4cb25704697e7659f04c0bf9, type: 3}
+    - {fileID: 8082526587725730646, guid: 04f0a6eb4cb25704697e7659f04c0bf9, type: 3}
+    - {fileID: 877232028148763671, guid: a976cba83b0863c46a9de0588df97b8f, type: 3}
+    - {fileID: 877232028148763671, guid: a976cba83b0863c46a9de0588df97b8f, type: 3}
+    - {fileID: 8076262052483687648, guid: 1479df171593f73469534b631fcef1ec, type: 3}
+  - enemyCreatures:
+    - {fileID: 877232028148763671, guid: a976cba83b0863c46a9de0588df97b8f, type: 3}
+    - {fileID: 877232028148763671, guid: a976cba83b0863c46a9de0588df97b8f, type: 3}
+    - {fileID: 8076262052483687648, guid: 1479df171593f73469534b631fcef1ec, type: 3}
+    - {fileID: 6178866796554985316, guid: 349205e2f7afa9343b1fe19e623f0399, type: 3}
+    - {fileID: 6154985450221626161, guid: 1d4bc4d6c3c5a934c95a9482cd101614, type: 3}
+    - {fileID: 6834537868846202852, guid: 131cd7f6e5d01f743a948678d6d2af66, type: 3}
+    - {fileID: 4123103487297223177, guid: 3d447a3a9c0c7fa4ea982b8bb9051e3b, type: 3}
   playerSpawn: {fileID: 818336206}
   enemySpawn: {fileID: 1195533325}
 --- !u!4 &1806931979

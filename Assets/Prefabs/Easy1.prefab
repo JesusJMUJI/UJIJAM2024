@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 6841055956127422537}
   - component: {fileID: 6741709374607667257}
   m_Layer: 7
-  m_Name: Creature(Clone) 2
+  m_Name: Easy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
