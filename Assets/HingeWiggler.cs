@@ -9,6 +9,9 @@ public class HingeWiggler : MonoBehaviour
 	[SerializeField] NoiseSampler sampler;
 	[SerializeField] float seed;
 	[SerializeField] PartAsset asset;
+	bool isAttacking;
+	float attackDir;
+	float motorForce = 180;
 	public void SetSampler(NoiseSampler _sampler){
 		sampler = _sampler;
 	}
@@ -21,9 +24,18 @@ public class HingeWiggler : MonoBehaviour
 	public void SetAsset(PartAsset _asset){
 		asset = _asset;
 	}
+	public void ToggleAttack(bool _isAttacking){
+		isAttacking = _isAttacking;
+		attackDir = 1-pastFase;
+		if(Mathf.Abs(attackDir - 0.5f) < 0.1f){
+			attackDir = Random.Range(0,1);
+		}
+	}
 	void Start(){
 		joint.useMotor = true;
 	}
+
+	float pastFase;
 	void Update()
 	{
 		if(joint == null){return;}
@@ -33,14 +45,17 @@ public class HingeWiggler : MonoBehaviour
 			return;
 		}
 
-		float fase = sampler.SampleAt((Vector2)transform.position + Vector2.down*seed*12.445f);
-
+		float fase = sampler.SampleAt((Vector2)transform.position * (isAttacking ? 2 : 1) + Vector2.down*seed*12.445f);
+		pastFase = fase;
+		fase = isAttacking ? attackDir : fase;
+		
 		float targetAngle = Mathf.Lerp(asset.angleRange.x, asset.angleRange.y, fase);
 		float deltaAngle = Mathf.DeltaAngle(joint.jointAngle,-targetAngle);
 		float angleFactor = Mathf.Clamp(deltaAngle/slowdownAngle,-1,1);
 		JointMotor2D motor = joint.motor;
-		motor.maxMotorTorque = 4000;
-		motor.motorSpeed = Mathf.LerpUnclamped(0,asset.speed,angleFactor);
+		motor.maxMotorTorque = motorForce * (isAttacking ? asset.attackMotorFactor : 1);
+		float speed = asset.speed * (isAttacking ? asset.attackSpeedFactor : 1);
+		motor.motorSpeed = Mathf.LerpUnclamped(0, speed,angleFactor);
 		joint.motor = motor;
 	}
 }

@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
 	}
 	public void SwitchToBattle(Creature playerCreature){
-		collectionPicker.Disable();
+		editor.Disable();
 		battleManager.SetPlayerCreature(playerCreature);
 		battleManager.Enable();
 		menuMisic.enabled = false;

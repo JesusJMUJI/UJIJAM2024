@@ -9,6 +9,7 @@ public class CreaturePart : MonoBehaviour
 	static float speedUpTime;
 	static bool slowedDown;
 	Rigidbody2D rb;
+	HingeWiggler[] wigglers;
 	public Rigidbody2D GetRigidbody(){
 		return rb;
 	}
@@ -17,6 +18,12 @@ public class CreaturePart : MonoBehaviour
 	}
 	[SerializeField] float health;
 	[SerializeField] PartAsset asset;
+	public void ToggleAttack(bool val){
+		foreach(HingeWiggler wiggler in wigglers){
+			if(!wiggler){continue;}
+			wiggler.ToggleAttack(val);
+		}
+	}
 	public void AssignAsset(PartAsset _asset){
 		asset = _asset;
 		health = asset.health;
@@ -25,11 +32,16 @@ public class CreaturePart : MonoBehaviour
 	public void AssignCreature(Creature _creature){
 		creature = _creature;
 	}
+
+	public void AssignWigglers(HingeWiggler[] _wigglers){
+		wigglers = _wigglers;
+	}
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if(col.gameObject.layer == gameObject.layer){
 			return;
 		}
+
 		if(col.relativeVelocity.magnitude > 15){
 			Instantiate(hitEffect, transform.position,Quaternion.Euler(0,0,Random.Range(-45,45)));
 		}

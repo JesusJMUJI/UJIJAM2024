@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 703717085027721875}
   - component: {fileID: 7442257168202890754}
   - component: {fileID: -440300285219413546}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,12 +124,12 @@ MonoBehaviour:
   deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
   asset: {fileID: 11400000, guid: 6733ee99ee2daf145a93200621fe7251, type: 2}
   wigglerSampler:
-    noiseScale: 0.2
-    scrollSpeed: {x: 3, y: 0}
+    noiseScale: 0.3
+    scrollSpeed: {x: 5, y: 0}
     offset: {x: 0, y: 0}
     octaves: 1
     lacunarity: 1
-    persistance: 0
+    persistence: 0
     filter: 2
     exponent: 0
     slope: 2

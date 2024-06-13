@@ -28,10 +28,10 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Distortion: 0.004
-    - _DistortionMaskScale: -18.7
-    - _DistortionScale: 186.5
-    - _Power: 0.08
+    - _Distortion: 2.04
+    - _DistortionMaskScale: 10.04
+    - _DistortionScale: 721.3
+    - _Power: 0.16
     - _Scale: 86.49
     m_Colors: []
   m_BuildTextureStacks: []

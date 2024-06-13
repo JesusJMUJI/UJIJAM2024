@@ -59,14 +59,18 @@ public class ConnectablePart : MonoBehaviour
 		//Handle hinges
 		HingeJoint2D[] joints = GetComponents<HingeJoint2D>();
 		float seed = Random.Range(0f,1f);
-		foreach(HingeJoint2D joint in joints){
+		HingeWiggler[] wigglers = new HingeWiggler[joints.Length];
+		for (int i = 0; i < joints.Length; i++){
+			HingeJoint2D joint = joints[i];
 			HingeWiggler wiggler = gameObject.AddComponent<HingeWiggler>();
+			wigglers[i] = wiggler;
 			wiggler.SetHinge(joint);
 			wiggler.SetSeed(seed);
 			wiggler.SetSampler(new NoiseSampler(wigglerSampler));
 			wiggler.SetAsset(asset);
 		}
-		
+		part.AssignWigglers(wigglers);
+
 		Freeze(false);
 		Destroy(this);
 

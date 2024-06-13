@@ -61,9 +61,12 @@ public class BattleManager : Environment
 		if(battleOver){return;}
 		enemyCreature.UpdateParts();
 		playerCreature.UpdateParts();
+		
 		enemyCreature.PullTowards(playerCreature.GetCenter(),creatureAttraction);
-
 		playerCreature.PullTowards(enemyCreature.GetCenter(),creatureAttraction);
+		if (Input.GetKeyDown(KeyCode.Space)){
+			playerCreature.Attack(enemyCreature.GetCenter());
+		}
 		if(enemyCreature.GetParts().Length == 0){
 			battleOver = true;
 			SlowMotion.LerpSpeedUp(0.2f);
