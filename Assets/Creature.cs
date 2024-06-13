@@ -8,7 +8,7 @@ public class Creature : MonoBehaviour
 	float maxImpulseDistance = 4;
 	float maxImpulseForce = 80;
 	float attackDuration = 0.4f;
-	float attackCooldown = 0.5f;
+	float attackCooldown = 1f;
 	bool attackOnCooldown = false;
 	bool isAttacking = false;
 	public void CompensateOffset(){
@@ -55,6 +55,11 @@ public class Creature : MonoBehaviour
 	{
 		StartCoroutine(AttackRoutine(target));
 	}
+
+	public bool CanAttack()
+	{
+		return !attackOnCooldown;
+	}
 	IEnumerator AttackRoutine(Vector2 target)
 	{
 		if(attackOnCooldown){
@@ -62,7 +67,9 @@ public class Creature : MonoBehaviour
 		}
 		foreach(CreaturePart part in creatureParts){
 			Vector2 delta = target - (Vector2)part.transform.position;
-			part.GetRigidbody().velocity = delta.normalized*50*Random.Range(0,2);
+			Vector2 velocity = part.GetRigidbody().velocity;
+			
+			part.GetRigidbody().velocity = Vector2.Lerp(velocity, delta.normalized*50, Random.Range(0,2));
 		}
 		attackOnCooldown = true;
 		ToggleAttack(true);

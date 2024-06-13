@@ -1,12 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BattleManager : Environment
 {
 	[SerializeField] Animator animator;
     [SerializeField] float creatureAttraction = 12f;
     [SerializeField] TextWriter text;
+    [SerializeField] Image spaceImage;
+    [SerializeField] Vector2 imageAlphaRange;
 	protected override void OnEnabled(){
 		cameraController.enabled = true;
 		LoadEnemy();
@@ -67,6 +72,9 @@ public class BattleManager : Environment
 		if (Input.GetKeyDown(KeyCode.Space)){
 			playerCreature.Attack(enemyCreature.GetCenter());
 		}
+
+		float spaceImageAlpha = Mathf.Lerp(imageAlphaRange.x , imageAlphaRange.y,(Mathf.Sin(Time.time * 10) + 1) / 2.0f);
+		spaceImage.color = Color.Lerp(spaceImage.color, playerCreature.CanAttack() ? new Color(1,1,1,spaceImageAlpha) : new Color(1,1,1,0), Time.deltaTime*30);
 		if(enemyCreature.GetParts().Length == 0){
 			battleOver = true;
 			SlowMotion.LerpSpeedUp(0.2f);
