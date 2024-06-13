@@ -11,7 +11,7 @@ public class PartAsset : ScriptableObject
 	[SerializeField] public float damage;
 	[SerializeField] public float mass = 1;
 	[SerializeField] public float speed = 200;
-	[System.NonSerialized] public float attackSpeedFactor = 3;
-	[System.NonSerialized] public float attackMotorFactor = 15f;
+	[SerializeField] public float attackSpeedFactor = 3;
+	[SerializeField] public float attackMotorFactor = 15f;
 	[SerializeField] public Vector2 angleRange;
 }
