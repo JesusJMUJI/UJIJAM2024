@@ -159,12 +159,12 @@ MonoBehaviour:
   deathEffect: {fileID: 5215456013107928033, guid: c1964dbc54958f943befd4950780918d, type: 3}
   asset: {fileID: 11400000, guid: 5658b404682933840908ea6c0bccc5e7, type: 2}
   wigglerSampler:
-    noiseScale: 0.2
-    scrollSpeed: {x: 3, y: 0}
+    noiseScale: 0.3
+    scrollSpeed: {x: 5, y: 0}
     offset: {x: 0, y: 0}
     octaves: 1
     lacunarity: 1
-    persistance: 0
+    persistence: 0
     filter: 2
     exponent: 0
     slope: 2
