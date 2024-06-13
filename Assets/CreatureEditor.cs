@@ -15,6 +15,7 @@ public class CreatureEditor : Environment
 		canvasGroup.alpha = 1;
 		canvasGroup.interactable = true;
 		canvasGroup.blocksRaycasts = true;
+		StartCoroutine(FadeHelp());
 		//TODO reset camera
 	}
 	protected override void OnDisabled(){
@@ -31,7 +32,6 @@ public class CreatureEditor : Environment
 
 	void Start()
 	{
-		StartCoroutine(FadeHelp());
 	}
 	IEnumerator FadeHelp(){
 		float time = 10;

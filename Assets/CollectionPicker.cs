@@ -13,7 +13,7 @@ public class CollectionPicker : Environment
 	[SerializeField] float mapSize = 40;
 	[SerializeField] float mapPadding = 3;
 	[SerializeField] float zoomDuration = 0.8f;
-	
+	[SerializeField] bool SPAWN_ALL = false;
 	
 	protected override void OnEnabled(){
 		collectionSelected = false;
@@ -21,6 +21,9 @@ public class CollectionPicker : Environment
 		cameraLerper.Reset();
 		int amount = 30 + GameManager.instance.cycleIndex*5;
 		amount = Mathf.Min(amount, 80);
+		if (SPAWN_ALL){
+			amount = partAssets.Length;
+		}
 		GenerateParts(amount);
 	}
 	protected override void OnDisabled(){
@@ -97,7 +100,11 @@ public class CollectionPicker : Environment
 		yield return new WaitForSeconds(0.15f);
 		animator.Play("Blink");
 		yield return new WaitForSeconds(0.2f);
-		GameManager.instance.SwitchToEditor(cameraFrame.GetPartsInFrame(), cameraLerper.transform.localPosition,cameraFrame.GetSize()/2);
+		PartPreview[] selectedParts = cameraFrame.GetPartsInFrame();
+		if (SPAWN_ALL){
+			selectedParts = FindObjectsOfType<PartPreview>();
+		}
+		GameManager.instance.SwitchToEditor(selectedParts, cameraLerper.transform.localPosition,cameraFrame.GetSize()/2);
 	}
 
 }
