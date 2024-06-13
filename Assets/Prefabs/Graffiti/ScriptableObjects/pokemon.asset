@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pokemon
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3666135191011236526, guid: 1deb85213e8876141a610524280cb2f5, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8420434514622871701, guid: c3e12d0b8fc79774f894f6dbf13d3b57, type: 3}
   health: 10
   damage: 5
   mass: 1

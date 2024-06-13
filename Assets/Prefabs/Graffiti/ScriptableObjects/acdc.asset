@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: acdc
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6954881472522944794, guid: cd3da00a793cb6c44aae8c93a6d6855b, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2792070974335181601, guid: 0995ae9bf7180fc4cb5c6f43a0d96015, type: 3}
   health: 10
   damage: 5
   mass: 1

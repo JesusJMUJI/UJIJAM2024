@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: biberon
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1896109689772472803, guid: 2a952af909a4d4d47b8e41bd4c647947, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 6659570046430354392, guid: 413f0608be96e524a94c895c46c35fc5, type: 3}
   health: 10
   damage: 5
   mass: 1

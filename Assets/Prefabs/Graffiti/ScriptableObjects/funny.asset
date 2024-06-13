@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: funny
   m_EditorClassIdentifier: 
   editorObject: {fileID: 447210395562043102, guid: 92069a565ed95c442a9419c8131bebd4, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4615927280967222501, guid: 79ba2b1b0e573ff4a8c881a49efed3e8, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07803e2b4406eb4db623d3eab820145, type: 3}
   m_Name: wildproject
   m_EditorClassIdentifier: 
-  editorObject: {fileID: 6954881472522944794, guid: cd3da00a793cb6c44aae8c93a6d6855b, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  editorObject: {fileID: 6954881472522944794, guid: cd28ce54cd065a145bd1321720ef3f75, type: 3}
+  previewObject: {fileID: 2792070974335181601, guid: f440d7880eb42c742b2383ae17f7f6a1, type: 3}
   health: 10
   damage: 5
   mass: 1

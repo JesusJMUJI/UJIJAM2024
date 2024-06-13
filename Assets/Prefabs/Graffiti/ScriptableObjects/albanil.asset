@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: albanil
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6954881472522944794, guid: 55abf652316f8fe428bb1c40fd4c6719, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2792070974335181601, guid: c8c11880f4b8d3c4eb12b216b650fd81, type: 3}
   health: 10
   damage: 5
   mass: 1

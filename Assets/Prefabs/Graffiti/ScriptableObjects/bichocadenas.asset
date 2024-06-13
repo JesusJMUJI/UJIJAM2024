@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bichocadenas
   m_EditorClassIdentifier: 
   editorObject: {fileID: 2944145644507550702, guid: 622a205f1ee32394da1699464c683db2, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7989503140672221653, guid: 6a1f110977ffa9c4f8aef207755c6cb5, type: 3}
   health: 10
   damage: 5
   mass: 1

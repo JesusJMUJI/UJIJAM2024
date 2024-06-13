@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: guadalajara
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6700822742990954881, guid: 579e4e5fb23473b46a70732eebdbd573, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4422180805296735639, guid: af52ff604157a314abd09eba540f19b1, type: 3}
   health: 10
   damage: 5
   mass: 1

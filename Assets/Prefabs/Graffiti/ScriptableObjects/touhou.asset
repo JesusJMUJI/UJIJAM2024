@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: touhou
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1073922452932519906, guid: 17e9facd667c10c4ca47b37dd0e4d620, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 5250221744871671257, guid: 27cdb295e3f7e114793703dd0db81596, type: 3}
   health: 10
   damage: 5
   mass: 1

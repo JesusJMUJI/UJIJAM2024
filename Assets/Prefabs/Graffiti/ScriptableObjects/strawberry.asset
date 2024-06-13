@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: strawberry
   m_EditorClassIdentifier: 
   editorObject: {fileID: 2896889901636101708, guid: f036b4154e41a1742ba73cdd10393adc, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7928600474359415927, guid: 25fb57027d03bb742bd0d3c161a17e3d, type: 3}
   health: 10
   damage: 5
   mass: 1

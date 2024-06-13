@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: colgado
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8588698901338951620, guid: 798276d574418d44ca5cbc9bd0f1571f, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3533898809918156287, guid: 178e5657f00ad324c90756e2cf40211a, type: 3}
   health: 10
   damage: 5
   mass: 1

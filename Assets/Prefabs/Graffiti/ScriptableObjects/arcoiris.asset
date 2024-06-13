@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arcoiris
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6497695496941588740, guid: 61908df68f3e2e04b852aa7c6a898469, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2024277576425124671, guid: 6de59a1715a1cf846a36e42c31b78efa, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: perdido
   m_EditorClassIdentifier: 
   editorObject: {fileID: 460114500977877313, guid: 8f41da1082e997647867a1585239576a, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4636871056878633850, guid: 54606b035d4b11b4892da00dea547d72, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: asus
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3813368370593743576, guid: 21950d73a595ff9469fe78bdca896009, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8273130450905669859, guid: 6ad16fab19fb7964392860e0aafdca66, type: 3}
   health: 10
   damage: 5
   mass: 1

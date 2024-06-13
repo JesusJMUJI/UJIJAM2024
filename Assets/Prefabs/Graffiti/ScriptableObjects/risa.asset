@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: risa
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8969148064435798903, guid: 5c5d1b9367293c84d9a18fe2195fb4f2, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4198215491188449612, guid: cec36fd16c4765545a64bc4b29c0de3e, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: boo
   m_EditorClassIdentifier: 
   editorObject: {fileID: 2892196933296818923, guid: c13e078e25f97c34da9e951126b99a4e, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7933367624348592336, guid: ab7c4cef3226b7a468eda7dd28f8523e, type: 3}
   health: 10
   damage: 5
   mass: 1

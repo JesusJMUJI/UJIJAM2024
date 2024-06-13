@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cagalera
   m_EditorClassIdentifier: 
   editorObject: {fileID: 236979451564984591, guid: fba209720d0ddab4bbb3675107a05985, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 5004121053817563956, guid: 0eacadbe84b488645bfa78ce8e91886b, type: 3}
   health: 10
   damage: 5
   mass: 1

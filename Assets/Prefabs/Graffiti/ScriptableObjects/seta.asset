@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: seta
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8153740136683321064, guid: 4edf21bca955c894dac76343a011f3c2, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3971112124257326291, guid: f65b3b807ab0cf445b2d9ff31eb6c04b, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: perritocaliente
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3484597214818456892, guid: a5cc68250e148e64da22d8c9ce7e225e, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8529844837272368903, guid: 7099ca4bb3f0c0f43b428bddabd20fe5, type: 3}
   health: 10
   damage: 5
   mass: 1

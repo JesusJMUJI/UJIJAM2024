@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: sapos
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1958682904027181575, guid: 5b4bc9b7db7b0894482c97b4ac0817df, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 6707405357434261564, guid: 75f57d78ad604e94e857ec2347e98a40, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: aries
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6104508768305424648, guid: ccb07a9866fe64743b8a4750c6f24206, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 1336527278092995379, guid: fcd5aa9a0629f3a4f8d5d16881acddde, type: 3}
   health: 10
   damage: 5
   mass: 1

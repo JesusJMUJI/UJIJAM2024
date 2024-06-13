@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lesbians
   m_EditorClassIdentifier: 
   editorObject: {fileID: 5207327535018189168, guid: a68ee355ef7810c42bae09c9878f3a79, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3018678416511092070, guid: afba6958af4a86f4381c6e56c528546c, type: 3}
   health: 10
   damage: 5
   mass: 1

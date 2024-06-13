@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: manzana
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6758959320342488114, guid: b27ab6b816eb37e49931f2d5584772bd, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4353856571827191844, guid: 62c84d9dd61112047b1cf2a6c6b72f56, type: 3}
   health: 10
   damage: 5
   mass: 1

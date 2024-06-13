@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lol
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1152383098430869603, guid: 616dba9a152f85143bfd42397f9facf6, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7952990364492903541, guid: 8a8e818ff571bab4f8e644c52d5a7d3c, type: 3}
   health: 10
   damage: 5
   mass: 1

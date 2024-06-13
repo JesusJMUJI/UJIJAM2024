@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: besosuerte
   m_EditorClassIdentifier: 
   editorObject: {fileID: 739434413834943905, guid: 3bab188d77f35e24492b9b503f451816, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 5510472681932513178, guid: 461e4c4290d62c14591f7dc7efd5fac6, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: girafa
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8437540124118232628, guid: 285eb6f8dc3599941aed9043d0ef7165, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3685057278943972367, guid: e587c74d8d69eb8489601068a8aa36eb, type: 3}
   health: 10
   damage: 5
   mass: 1

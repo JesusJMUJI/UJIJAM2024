@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: borratajo
   m_EditorClassIdentifier: 
   editorObject: {fileID: 7705132381762285736, guid: b15a2e9ddae6c634a99d864b31c27469, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3230768718574031507, guid: 77c44314a8ef57a48b5b8e1621ae4657, type: 3}
   health: 10
   damage: 5
   mass: 1

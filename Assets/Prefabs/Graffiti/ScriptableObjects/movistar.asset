@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: movistar
   m_EditorClassIdentifier: 
   editorObject: {fileID: 944174749709212036, guid: 5cac8c8af48612f418204bddf6555c1f, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7834791267435904402, guid: 4188c295cf118c9489f1c78ab0436d90, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: arbol
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3580037412536211032, guid: d216daea8364af249960707461f40429, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8616801247956317283, guid: fd6f8eb1b5ab69b44a522be2e195a1e7, type: 3}
   health: 10
   damage: 5
   mass: 1
