@@ -1339,15 +1339,11 @@ MonoBehaviour:
   cameraFrame: {fileID: 1523346380}
   collectionContainer: {fileID: 1710317229}
   partAssets:
-  - {fileID: 11400000, guid: ee25e6a310104544385ae1decf0d0ced, type: 2}
-  - {fileID: 11400000, guid: ee25e6a310104544385ae1decf0d0ced, type: 2}
-  - {fileID: 11400000, guid: 62eca7a09cbda6145bbd64239d6ca562, type: 2}
-  - {fileID: 11400000, guid: a7f0d52e09e5f6d4a89f26ff68cadf5a, type: 2}
-  - {fileID: 11400000, guid: 15480991982e88446967114d4afa85e7, type: 2}
-  - {fileID: 11400000, guid: ee25e6a310104544385ae1decf0d0ced, type: 2}
-  - {fileID: 11400000, guid: 62eca7a09cbda6145bbd64239d6ca562, type: 2}
-  - {fileID: 11400000, guid: a7f0d52e09e5f6d4a89f26ff68cadf5a, type: 2}
-  - {fileID: 11400000, guid: 15480991982e88446967114d4afa85e7, type: 2}
+  - {fileID: 11400000, guid: d06dfb1f185092842ac11b0e4a1c7b9b, type: 2}
+  - {fileID: 11400000, guid: 306942f93b9eb4442b2eceb995158bb2, type: 2}
+  - {fileID: 11400000, guid: 7704ba11b939396498e6917854cba90c, type: 2}
+  - {fileID: 11400000, guid: 6733ee99ee2daf145a93200621fe7251, type: 2}
+  - {fileID: 11400000, guid: 8603b4dc67f4b4547a23ea5364f022c0, type: 2}
   animator: {fileID: 506598907}
   mapSize: 20
   mapPadding: 1
@@ -3387,13 +3383,13 @@ MonoBehaviour:
   cameraController: {fileID: 778474519}
   enemyTiers:
   - enemyCreatures:
-    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
     - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
     - {fileID: 6741709374607667257, guid: 135d8105765679f47b92c78e8504d8ca, type: 3}
-    - {fileID: 6728001308206087058, guid: db04b7920b577dc4e908a5ec95688ea2, type: 3}
     - {fileID: 5460490995954411747, guid: ac76a1213fcdb9b4f842845d4e359bb1, type: 3}
-    - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}
     - {fileID: 5486807253471227545, guid: d2422ddd594cbcd48ae4eaf0d963d361, type: 3}
+    - {fileID: 1469553620404004983, guid: 85c99beead5952146b3ccd13cf8fa578, type: 3}
+    - {fileID: 2241054923957440432, guid: 94a964510460dd64aae38f78073b6c8d, type: 3}
+    - {fileID: 7198004514261330415, guid: 45dc33e8edd281b45bda56912aa8b4e7, type: 3}
   - enemyCreatures:
     - {fileID: 6728001308206087058, guid: db04b7920b577dc4e908a5ec95688ea2, type: 3}
     - {fileID: 3050081086061598935, guid: 7d0250caee9b89d47a69cf1a0d3b6da2, type: 3}

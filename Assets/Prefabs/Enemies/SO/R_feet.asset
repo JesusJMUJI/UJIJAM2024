@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e07803e2b4406eb4db623d3eab820145, type: 3}
   m_Name: R_feet
   m_EditorClassIdentifier: 
-  editorObject: {fileID: 5591727447651430269, guid: 7cf69220f6eece74d980d8c074b703d9, type: 3}
-  previewObject: {fileID: 2849124545440968684, guid: 50da716b582014d47bd30e4665c3002c, type: 3}
+  editorObject: {fileID: 7846670326159288494, guid: 4c23fefc2162041468258845566f1866, type: 3}
+  previewObject: {fileID: 1582150880833829244, guid: d8bdde3c5bdd52143adcfc2642d4f71f, type: 3}
   health: 10
   damage: 5
   mass: 1
   speed: 200
+  attackSpeedFactor: 3
+  attackMotorFactor: 15
   angleRange: {x: -100, y: 100}
