@@ -1339,11 +1339,11 @@ MonoBehaviour:
   cameraFrame: {fileID: 1523346380}
   collectionContainer: {fileID: 1710317229}
   partAssets:
-  - {fileID: 11400000, guid: d06dfb1f185092842ac11b0e4a1c7b9b, type: 2}
-  - {fileID: 11400000, guid: 306942f93b9eb4442b2eceb995158bb2, type: 2}
-  - {fileID: 11400000, guid: 7704ba11b939396498e6917854cba90c, type: 2}
-  - {fileID: 11400000, guid: 6733ee99ee2daf145a93200621fe7251, type: 2}
-  - {fileID: 11400000, guid: 8603b4dc67f4b4547a23ea5364f022c0, type: 2}
+  - {fileID: 11400000, guid: cfe9ba0119713e5448432ee98e3f64cb, type: 2}
+  - {fileID: 11400000, guid: d0a1f997d5726b543bbaeb759ed97927, type: 2}
+  - {fileID: 11400000, guid: 5c25a4c382935c94d97c4866c3808b29, type: 2}
+  - {fileID: 11400000, guid: ee25e6a310104544385ae1decf0d0ced, type: 2}
+  - {fileID: 11400000, guid: 88fe746e6e1f39641912eba5ba6116d1, type: 2}
   animator: {fileID: 506598907}
   mapSize: 20
   mapPadding: 1
