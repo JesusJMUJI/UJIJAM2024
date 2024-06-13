@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: boobies
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8422555617048711807, guid: 257bc1401aa6c464fa5408921625ba67, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3664016595793522756, guid: c0b18b640d850634ea7175ad54fa3b70, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: donjaime
   m_EditorClassIdentifier: 
   editorObject: {fileID: 9217194238875839318, guid: 1811f72f7a4e1e243a7f29e86075e189, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4166343438863223149, guid: 03459d96ba79b4e4eaf80a7eaad115f9, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: gravityfalls
   m_EditorClassIdentifier: 
   editorObject: {fileID: 947305294689115930, guid: e7e5f9214510e8343a18cb10b469758d, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7819698034234391308, guid: 99a0799b7c5f8054980fbf85237fd7e4, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: sirena
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3671265298861279400, guid: 620244bd1b82e504f810094ccd4d86f5, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8415303890305034899, guid: 994e27249791bb8419210b64f16ad6de, type: 3}
   health: 10
   damage: 5
   mass: 1

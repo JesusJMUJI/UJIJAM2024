@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cadena
   m_EditorClassIdentifier: 
   editorObject: {fileID: 344911294364692156, guid: 304308d4409b022419c178d18e496d11, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4824059873914309767, guid: 2f2a4907a5a03a240b9f40f6a6b7acb1, type: 3}
   health: 10
   damage: 5
   mass: 1

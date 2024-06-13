@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tresenraya
   m_EditorClassIdentifier: 
   editorObject: {fileID: 5359980528878667982, guid: 4f745992fc9dd254bb4a3d49a7e7fd8c, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 889927116627553013, guid: 0a8f2f1726c682945a8232952a2f573d, type: 3}
   health: 10
   damage: 5
   mass: 1

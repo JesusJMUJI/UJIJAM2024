@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: perrosad
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1918484074045489482, guid: 16b28dfc4f299f746b4fe9299db3ded5, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 6675474850195809137, guid: a368bcfb4c30b2341bf058d6732d6a6d, type: 3}
   health: 10
   damage: 5
   mass: 1

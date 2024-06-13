@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: dios
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3504602561601072622, guid: 37f659c6ccf7df04388b39b976db4332, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8545869936795815893, guid: a26e9fbd38697f04d983f31d0d86d98c, type: 3}
   health: 10
   damage: 5
   mass: 1

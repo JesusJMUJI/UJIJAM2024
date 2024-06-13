@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pais
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1867403845007073797, guid: 48a0e4d580e82ad4ba797bca4335fe6b, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2932298671378860233, guid: ab236af2590b13942a1f742bf623bb86, type: 3}
   health: 10
   damage: 5
   mass: 1

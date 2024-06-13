@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cruzado
   m_EditorClassIdentifier: 
   editorObject: {fileID: 2008568071008857742, guid: 223cedc171872d5499f3776e7f49db6e, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 6765532673762708661, guid: 4339af6836a30854aadb4f1fb090e3fb, type: 3}
   health: 10
   damage: 5
   mass: 1

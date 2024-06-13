@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: jagger
   m_EditorClassIdentifier: 
   editorObject: {fileID: 1725305998691984572, guid: 60060ea14a70d414ab77a74ac83934d6, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8525631171352330410, guid: 118f09a1e55410140aa362be7c091d62, type: 3}
   health: 10
   damage: 5
   mass: 1

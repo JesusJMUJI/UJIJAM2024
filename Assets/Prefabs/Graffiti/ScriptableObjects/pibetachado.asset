@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pibetachado
   m_EditorClassIdentifier: 
   editorObject: {fileID: 390373936895293781, guid: 800f207c18f3b3645b83faeabfaf7823, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 4850725468996279150, guid: 9d1e871c25a63434db697c168ac8bbea, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: annie
   m_EditorClassIdentifier: 
   editorObject: {fileID: 8978139188009083650, guid: af9937c71cea5954d832f70c2a84ac9e, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8206231194914028556, guid: 736f9abe0550d22419af08cec46de9cb, type: 3}
   health: 10
   damage: 5
   mass: 1

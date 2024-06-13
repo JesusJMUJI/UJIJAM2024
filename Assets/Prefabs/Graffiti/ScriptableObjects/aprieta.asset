@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: aprieta
   m_EditorClassIdentifier: 
   editorObject: {fileID: 4757342638346063518, guid: 034fe62af3db1994abf8285f8f727569, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 5728534893486412176, guid: bebde988bd1c7824db3bbe9b86ef7f0a, type: 3}
   health: 10
   damage: 5
   mass: 1

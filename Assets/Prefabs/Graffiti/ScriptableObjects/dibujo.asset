@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: dibujo
   m_EditorClassIdentifier: 
   editorObject: {fileID: 5126315090477630052, guid: 7a6afb877acb10f47ba6ad8e4b92d558, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 80935539655876703, guid: 5b032952c592b4a42b101ca121d9be19, type: 3}
   health: 10
   damage: 5
   mass: 1

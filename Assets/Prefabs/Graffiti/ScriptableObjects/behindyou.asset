@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: behindyou
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6592112916340140216, guid: 5953214adda919e48b2e3d0ed1298e0b, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2107752651549018755, guid: e80a2b30e2ae14a4787b8e6c13ca969f, type: 3}
   health: 10
   damage: 5
   mass: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: slay
   m_EditorClassIdentifier: 
   editorObject: {fileID: 6522367487097177849, guid: aa407c7bbbfe92f4d92a6cae86360f7a, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 2071590648011318466, guid: 7ff18bf72d9bd4a4c979d06788ea8e63, type: 3}
   health: 10
   damage: 5
   mass: 1

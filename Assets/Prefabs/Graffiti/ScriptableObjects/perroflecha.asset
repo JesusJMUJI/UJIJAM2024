@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: perroflecha
   m_EditorClassIdentifier: 
   editorObject: {fileID: 2896702186350093371, guid: 62fcffebb6ac45542897be6540a5210f, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 7928861271770711552, guid: a26c7dfa73799154ea9a48842f2b37f7, type: 3}
   health: 10
   damage: 5
   mass: 1

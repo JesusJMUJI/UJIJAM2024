@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lavateelculo
   m_EditorClassIdentifier: 
   editorObject: {fileID: 5527243503687910996, guid: 399c2112d68015041b7198c085209af5, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3248241458841494082, guid: 69ea80ede806b664ebfeeba2907264be, type: 3}
   health: 10
   damage: 5
   mass: 1

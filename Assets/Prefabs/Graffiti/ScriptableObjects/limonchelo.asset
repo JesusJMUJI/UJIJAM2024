@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: limonchelo
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3111308819826245492, guid: 03c1981c347bc25419cc73cfe6ae95e8, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 5372005078487964514, guid: e6d566bee6ef5d04bbd9631415671e5d, type: 3}
   health: 10
   damage: 5
   mass: 1

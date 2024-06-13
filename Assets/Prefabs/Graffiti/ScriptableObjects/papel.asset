@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: papel
   m_EditorClassIdentifier: 
   editorObject: {fileID: 3957753445476982051, guid: a675d2699b28a0748831a79a9afc33fd, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8131000439995612952, guid: 61395dad77679414b81d6ac6fde44e1c, type: 3}
   health: 10
   damage: 5
   mass: 1

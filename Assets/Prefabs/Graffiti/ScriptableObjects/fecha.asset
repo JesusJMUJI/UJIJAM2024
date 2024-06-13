@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: fecha
   m_EditorClassIdentifier: 
   editorObject: {fileID: 4585787014199441493, guid: 33b44e1d327f06645aba642a273b8a7c, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 8761791446030522990, guid: 501b2f4493d0ce94e80cb74ae621e6d1, type: 3}
   health: 10
   damage: 5
   mass: 1

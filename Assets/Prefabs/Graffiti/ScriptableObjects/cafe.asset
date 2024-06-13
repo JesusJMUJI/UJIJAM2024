@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: cafe
   m_EditorClassIdentifier: 
   editorObject: {fileID: 7861306076871836061, guid: e927751676f83fe41877a553946a0182, type: 3}
-  previewObject: {fileID: 4047501857335412358, guid: 73f35e695f435984db26f586ac345720, type: 3}
+  previewObject: {fileID: 3108370095467963302, guid: 811528a93bfb94d4bae69513ce324b58, type: 3}
   health: 10
   damage: 5
   mass: 1
