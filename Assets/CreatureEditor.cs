@@ -1,15 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreatureEditor : Environment
 {	
 	[SerializeField] bool CREATE_ENEMY;
+	[SerializeField] CanvasGroup canvasGroup;
+	[SerializeField] Image helpImage;
+	
 	public static bool isEditing;
 	protected override void OnEnabled(){
+		canvasGroup.alpha = 1;
+		canvasGroup.interactable = true;
+		canvasGroup.blocksRaycasts = true;
 		//TODO reset camera
 	}
 	protected override void OnDisabled(){
+		canvasGroup.alpha = 0;
+		canvasGroup.interactable = false;
+		canvasGroup.blocksRaycasts = false;
 	}
 	[SerializeField] CameraPan cameraController;
 	void ClearParts(){
@@ -17,6 +28,20 @@ public class CreatureEditor : Environment
 			Destroy(child.gameObject);
 		}
 	}
+
+	void Start()
+	{
+		StartCoroutine(FadeHelp());
+	}
+	IEnumerator FadeHelp(){
+		float time = 10;
+		while(time >= 0){
+			time -= Time.deltaTime;
+			helpImage.color = Color.Lerp(Color.white, new Color(1, 1, 1, 0), 1 - Math.Clamp(time, 0, 1));
+			yield return null;
+		}
+	}
+
 	public void AssignCollection(PartPreview[] selectedParts, Vector2 relativePosition, float frameZoom){
 		ClearParts();
 

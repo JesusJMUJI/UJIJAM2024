@@ -13,6 +13,8 @@ public class CollectionPicker : Environment
 	[SerializeField] float mapSize = 40;
 	[SerializeField] float mapPadding = 3;
 	[SerializeField] float zoomDuration = 0.8f;
+	
+	
 	protected override void OnEnabled(){
 		collectionSelected = false;
 		cameraFrame.enabled = true;

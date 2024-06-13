@@ -12,10 +12,15 @@ public class BattleManager : Environment
     [SerializeField] TextWriter text;
     [SerializeField] Image spaceImage;
     [SerializeField] Vector2 imageAlphaRange;
+    [SerializeField] CanvasGroup canvasGroup;
+		
 	protected override void OnEnabled(){
 		cameraController.enabled = true;
 		LoadEnemy();
 		battleOver = false;
+		canvasGroup.alpha = 1;
+		canvasGroup.interactable = true;
+		canvasGroup.blocksRaycasts = true;
 		//TODO reset camera
 	}
 	protected override void OnDisabled(){
@@ -26,6 +31,9 @@ public class BattleManager : Environment
 		if(playerCreature){
 			Destroy(playerCreature.gameObject);
 		}
+		canvasGroup.alpha = 0;
+		canvasGroup.interactable = false;
+		canvasGroup.blocksRaycasts = false;
 	}
 	[SerializeField] CameraController cameraController;
 	// [SerializeField] Transform battleContainer;
